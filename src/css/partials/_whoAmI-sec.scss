@@ -1,0 +1,101 @@
+.name {
+    margin-top: 100px;
+
+    h2 {
+        display: inline;
+    }
+}
+
+#myName {
+    font-family: Lucida Console;
+    @include color-fontSize-fontWeight($primary-color, 72px, 400);
+}
+
+.input {
+    animation: caret 1s steps(1) infinite;
+}
+
+#name-input {
+    background-color: rgba(116,127,224,.65);
+    font-size: 72px;
+}
+
+@keyframes caret {
+    50% {
+        background-color: transparent;
+    }
+}
+
+.description {
+    margin: 80px 0;
+    @include color-fontSize-fontWeight($third-color, 20px, 300);
+    line-height: 40px;
+
+    a {
+        font-weight: 500;
+        color: $primary-color;
+    }
+}
+
+/* terminal div */
+
+.terminal-header {
+    height: 28px;
+    background-color: #e4e3e5;
+    border-radius: 10px 10px 0 0;
+    @include flex-align(center);
+}
+
+[class^='header-button'] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 9px;
+}
+
+.header-button.red {
+    background-color: #f96256;
+    border: 1px solid #f65549;
+}
+
+.header-button.yellow {
+    background-color: #fdbc3d;
+    border: 1px solid #ffb524;
+}
+
+.header-button.green {
+    background-color: #33c948;
+    border: 1px solid #2dbb41;
+}
+
+.terminal-window {
+    background-color: $secondary-color;
+    border-radius: 0 0 4px 4px;
+    box-shadow: $box-shadow;
+    font-family: Consolas, Lucida Console;
+    padding: 0 30px;
+    padding-bottom: 50px;
+}
+
+.statement {
+    padding-top: 35px;
+}
+
+.statement-input {
+    color: white;
+    font-weight: 300;
+    padding-bottom: 7px;
+}
+
+.statement-response {
+    color: #e7d184;
+
+    a {
+        color: #35feff;
+    }
+}
+
+#statement-light {
+    background-color: hsla(0,0%,97%,.65);
+    font-size: 16px;
+}

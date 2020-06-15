@@ -1,0 +1,63 @@
+// BORDER
+@mixin border-1px-solid($border-direction, $color) {
+    #{$border-direction}: 1px solid $color;
+}
+
+@mixin border-1px-solid-radius($border-direction, $color, $radius) {
+    #{$border-direction}: 1px solid $color;
+    border-radius: $radius;
+}
+// FINE BORDER
+
+// ELEMENTO POSIZIONATO FISSO
+@mixin fixed-element($direction-fix, $z-index) {
+    position: fixed;
+    #{$direction-fix}: 0;
+    z-index: $z-index;
+    width: 100%;
+}
+
+// FLEX
+@mixin flex-justify-align($justify-direction, $align-direction) {
+    display: flex;
+    justify-content: $justify-direction;
+    align-items: $align-direction;
+}
+
+@mixin flex-justify($justify-direction) {
+    display: flex;
+    justify-content: $justify-direction;
+}
+
+@mixin flex-align($align-direction) {
+    display: flex;
+    align-items: $align-direction;
+}
+
+@mixin flex-align-column($align-direction) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align-direction;
+}
+
+@mixin flex-align-column-textCenter($align-direction) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align-direction;
+    text-align: center;
+}
+// FINE FLEX
+
+
+// COLORE, DIMENSIONE FONT, GRANDEZZA FONT
+@mixin color-fontSize($color, $font-size) {
+    color: $color;
+    font-size: $font-size;
+}
+
+@mixin color-fontSize-fontWeight($color, $font-size, $font-weight) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+// FINE STILE COLORI, FONT

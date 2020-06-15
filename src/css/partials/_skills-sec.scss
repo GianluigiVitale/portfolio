@@ -1,0 +1,72 @@
+.skills {
+    margin: 75px 0 75px 0;
+    text-align: center;
+}
+
+.skills h2, .projects h2, .contacts h2 {
+    @include color-fontSize-fontWeight($third-color, 24px, 500);
+}
+
+.skills h2:after, .projects h2:after, .contacts h2:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 4px solid #747fe0;
+    width: 50px;
+}
+
+
+
+.skills-icon {
+    @include flex-justify-align(space-between, center);
+    flex-wrap: wrap;
+    margin-top: 75px;
+    padding-top: 80px;
+    @include color-fontSize($third-color, 20px);
+    box-shadow: $box-shadow;
+    border-radius: 75px;
+
+    div {
+        width: 33%;
+        padding-bottom: 50px;
+    }
+
+    img {
+        width: 80px;
+    }
+
+    p {
+        padding-top: 10px;
+    }
+}
+
+#html img {
+    width: 128px;
+    height: 85px;
+}
+
+#js-jquery img {
+    height: 80px;
+    width: auto;
+}
+
+#php img {
+    width: 90px;
+    position: relative;
+    top: 12px;
+}
+
+#php p {
+    position: relative;
+    top: 16px;
+}
+
+#mysql img {
+    width: 105px;
+}
+
+#mysql p {
+    position: relative;
+    top: 5px;
+}

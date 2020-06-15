@@ -1,0 +1,119 @@
+.projects h2 {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.project-card {
+    margin-bottom: 80px;
+    font-family: Open Sans;
+    background-color: white;
+    box-shadow: $box-shadow;
+    border-radius: 5px;
+    overflow: hidden;
+    color: $third-color;
+}
+
+.video-content {
+    position: relative;
+    padding: 60px 60px 0px 60px;
+    padding-bottom: 0;
+    background: linear-gradient(90deg, #DDECFF 50%, #c6c0f1 50%);
+}
+
+#filter-top {
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    width: 100%;
+}
+
+.video {
+    @include flex-justify(center);
+}
+
+#filter-bottom {
+    position: absolute;
+    width: calc(100% - 80px);
+    max-width: 1000px
+}
+
+.project-content {
+    padding: 50px 40px 40px 40px;
+
+    h3 {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 35px;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 38px;
+        text-align: center;
+    }
+
+    p {
+        padding-bottom: 35px;
+        line-height: 27px;
+    }
+}
+
+.project-skills {
+    @include flex-justify(center);
+    flex-wrap: wrap;
+
+    span {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 2px solid #92eac0;
+        border-radius: 4px;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+}
+
+.project-links {
+    @include flex-justify(center);
+    flex-wrap: wrap;
+
+    a {
+        @include flex-align(center);
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+}
+
+.live-demo, .view-source {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: $box-shadow2;
+    border-radius: 4px;
+}
+
+.live-demo {
+    background: $primary-color;
+    color: white;
+
+    &:hover {
+        background: $secondary-color-hover;
+        transform: translateY(-1px);
+        box-shadow: $box-shadow3;
+    }
+
+    img {
+        width: 19px;
+        margin-left: 3px;
+    }
+}
+
+.view-source {
+    background: white;
+    color: $primary-color;
+
+    img {
+        width: 20px;
+        margin-right: 3px;
+    }
+}

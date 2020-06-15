@@ -1,0 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f9fc;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.container {
+    padding: 0 40px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    z-index: 1;
+}
+
+.link {
+    font-weight: 500;
+    color: $primary-color;
+}

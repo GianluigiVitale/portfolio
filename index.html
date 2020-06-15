@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Gianluigi's Portfolio</title>
+        <link rel="icon" href="assets/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="dist/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha256-usTqAE1ywvdMtksWzdeWzD75MsfJN0h0U7y2NtZL3N0=" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#skills" id="goSkills">Skills</a></li>
+                        <li><a href="#projects" id="goProjects">Projects</a></li>
+                        <li><a href="#contact" id="goContacts">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="who-am-i">
+            <div class="container">
+                <div class="name">
+                    <h2 id="myName">&gt;</h2>
+                    <span class="input" id="name-input">&nbsp;&nbsp;</span>
+                </div>
+                <div class="description">
+                    <p>I am a full-stack web developer. My passion is building simple, beautiful user experiences. <br> Check out my <a href="#projects" id="goToProjects">side-projects</a> below.</p>
+                </div>
+                <div class="about">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="header-button red"></div>
+                            <div class="header-button yellow"></div>
+                            <div class="header-button green"></div>
+                        </div>
+                        <div class="terminal-window">
+                            <div class="statement-added">   <!--   Here go the statements thanks to handlebars    -->
+
+                            </div>
+                            <div class="statement" id="statement-terminal">
+                                <div class="statement-input">
+                                    <span>> </span><span class="input" id="statement-light">&nbsp;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills" id="skills">
+                    <h2>Skills</h2>
+                    <div class="skills-icon">     <!--   Here go the skills thanks to handlebars    -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 id="title-project">Projects</h2>
+                <div class="project-container">     <!--   Here go the projects thanks to handlebars    -->
+
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contact">
+            <div class="container">
+                <h2 id="contact-me">Contact me!</h2>
+                <div class="contact-links">
+                    <span>
+                        <a rel="noopener" target="_blank" href="mailto:gianluigi.vitale12@gmail.com">gianluigi.vitale12@gmail.com</a>
+                    </span>
+                    <span>
+                        <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/gianluigi-vitale615">LinkedIn</a>
+                    </span>
+                    <span>
+                        <a rel="noopener" target="_blank" href="https://github.com/GianluigiVitale">Github</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <span id="madeby">Made by Gianluigi Vitale © <span id="currentYear"></span></span>
+        </footer>
+
+
+
+        <!-- SCRIPTS -->
+
+
+
+        <script id="statement-template" type="text/x-handlebars-template">      <!--   Handlebars template to create statements div    -->
+            <div class="statement" id="{{id}}">
+                <div class="statement-input">
+                    <p>{{input}}</p>
+                </div>
+                <div class="statement-response">
+                    <p>{{{response}}}</p>
+                </div>
+            </div>
+        </script>
+
+        <script id="skill-template" type="text/x-handlebars-template">      <!--   Handlebars template to create skills div    -->
+            <div id="{{id}}">
+                <img src="{{pathSkill}}" alt="{altSkill}">
+                <p>{{textSkill}}</p>
+            </div>
+        </script>
+
+        <script id="project-template" type="text/x-handlebars-template">  <!--   Handlebars template to create projects div    -->
+            <div class="project-card" id="{{id}}">
+                <div class="video-content">
+                    <img id="filter-top" src="assets/top-filter.png" alt="filter">
+                    <div class="video">
+                        <video src="{{video}}" autoplay loop controls muted preload="assets/videos/loading.jpg"></video>
+                    </div>
+                </div>
+                <img id="filter-bottom" src="assets/filter.png" alt="filter">
+                <div class="project-content">
+                    <h3>{{title}}</h3>
+                    <p>{{{description}}}</p>
+                    <div class="project-skills">
+                        {{{skills}}}
+                    </div>
+                    <div class="project-links">
+                        <a class="live-demo" style="display: {{liveDisplay}}" target="_blank" rel="noopener noreferrer" href="{{linkLive}}">Live Demo
+                            <img src="assets/arrow.png" alt="arrow">
+                        </a>
+                        <a class="view-source" target="_blank" rel="noopener noreferrer" href="{{linkGitHub}}">
+                            <img src="assets/try.png" alt="github">
+                            View Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script src="dist/main.js" charset="utf-8"></script>
+    </body>
+</html>

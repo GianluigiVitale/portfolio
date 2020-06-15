@@ -1,0 +1,28 @@
+@import "partials/_variables";
+@import "partials/_mixins";
+/* RESET */
+@import "partials/_reset";
+/* FINE RESET */
+/* STILE GENERALE */
+@import "partials/_common";
+/* FINE STILE GENERALE */
+/* HEADER */
+@import "partials/_header";
+/* FINE HEADER */
+/* WHO AM I */
+@import "partials/_whoAmI-sec";
+/* FINE WHO AM I */
+/* SKILLS */
+@import "partials/_skills-sec";
+/* FINE SKILLS */
+/* PROJECTS */
+@import "partials/_projects-sec";
+/* FINE PROJECTS */
+/* CONTATTI */
+@import "partials/_contacts-sec";
+/* FINE CONTATTI */
+/* FOOTER */
+@import "partials/_footer";
+/* FINE FOOTER */
+/* MEDIA QUERY */
+@import "partials/_mediaQuery";

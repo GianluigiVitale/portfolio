@@ -487,8 +487,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Users\Gianluigi\Desktop\developer\website_portfolio\src\js\main.js */"./src/js/main.js");
-module.exports = __webpack_require__(/*! D:\Users\Gianluigi\Desktop\developer\website_portfolio\src\css\style.scss */"./src/css/style.scss");
+__webpack_require__(/*! D:\Users\Gianluigi\Desktop\BooleanLezioniEdEsercizi\portfolio\portfolio\src\js\main.js */"./src/js/main.js");
+module.exports = __webpack_require__(/*! D:\Users\Gianluigi\Desktop\BooleanLezioniEdEsercizi\portfolio\portfolio\src\css\style.scss */"./src/css/style.scss");
 
 
 /***/ })

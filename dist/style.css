@@ -10,6 +10,10 @@
 
 /* STILE GENERALE */
 
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 body {
   font-family: "Roboto", Helvetica, sans-serif;
   background-color: #f6f9fc;
@@ -591,3 +595,4 @@ footer span {
     padding-bottom: 50px;
   }
 }
+

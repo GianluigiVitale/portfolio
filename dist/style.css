@@ -15,7 +15,7 @@ html.sr .load-hidden {
 }
 
 body {
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif, Helvetica, Helvetica Neue;
   background-color: #f6f9fc;
 }
 
@@ -39,6 +39,7 @@ a:hover {
 
 video {
   width: 100%;
+  height: auto;
   z-index: 1;
 }
 
@@ -105,7 +106,7 @@ video {
 }
 
 #myName {
-  font-family: Lucida Console, Helvetica;
+  font-family: Lucida Console, Helvetica, Helvetica Neue;
   color: #747fe0;
   font-size: 72px;
   font-weight: 400;
@@ -182,7 +183,7 @@ video {
   background-color: #5a5d7a;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.15), 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
-  font-family: Consolas, Lucida Console, Helvetica;
+  font-family: Consolas, Lucida Console, Helvetica, Helvetica Neue;
   padding: 0 30px;
   padding-bottom: 50px;
 }
@@ -305,7 +306,7 @@ video {
 
 .project-card {
   margin-bottom: 80px;
-  font-family: Open Sans, Helvetica;
+  font-family: Open Sans, Helvetica, Helvetica Neue;
   background-color: white;
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.15), 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
@@ -485,7 +486,7 @@ footer {
 }
 
 footer span {
-  font-family: Open Sans, Helvetica;
+  font-family: Open Sans, Helvetica, Helvetica Neue;
   color: #525f7f;
   font-size: 13px;
 }

@@ -7,7 +7,7 @@
 }
 
 #myName {
-    font-family: Lucida Console, Helvetica;
+    font-family: Lucida Console, Helvetica, Helvetica Neue;
     @include color-fontSize-fontWeight($primary-color, 72px, 400);
 }
 
@@ -72,7 +72,7 @@
     background-color: $secondary-color;
     border-radius: 0 0 4px 4px;
     box-shadow: $box-shadow;
-    font-family: Consolas, Lucida Console, Helvetica;
+    font-family: Consolas, Lucida Console, Helvetica, Helvetica Neue;
     padding: 0 30px;
     padding-bottom: 50px;
 }

@@ -3,7 +3,7 @@ footer {
     padding-bottom: 50px;
 
     span {
-        font-family: Open Sans, Helvetica;
+        font-family: Open Sans, Helvetica, Helvetica Neue;
         @include color-fontSize($third-color, 13px);
     }
 }

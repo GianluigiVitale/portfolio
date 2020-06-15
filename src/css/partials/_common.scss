@@ -3,7 +3,7 @@ html.sr .load-hidden {
 }
 
 body {
-    font-family: 'Roboto', Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif, Helvetica ,Helvetica Neue;
     background-color: #f6f9fc;
 }
 
@@ -27,6 +27,7 @@ a {
 
 video {
     width: 100%;
+    height: auto;
     z-index: 1;
 }
 

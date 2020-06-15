@@ -11,7 +11,7 @@
 /* STILE GENERALE */
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   background-color: #f6f9fc;
 }
 
@@ -101,7 +101,7 @@ video {
 }
 
 #myName {
-  font-family: Lucida Console;
+  font-family: Lucida Console, Helvetica;
   color: #747fe0;
   font-size: 72px;
   font-weight: 400;
@@ -178,7 +178,7 @@ video {
   background-color: #5a5d7a;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.15), 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
-  font-family: Consolas, Lucida Console;
+  font-family: Consolas, Lucida Console, Helvetica;
   padding: 0 30px;
   padding-bottom: 50px;
 }
@@ -301,7 +301,7 @@ video {
 
 .project-card {
   margin-bottom: 80px;
-  font-family: Open Sans;
+  font-family: Open Sans, Helvetica;
   background-color: white;
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.15), 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
@@ -481,7 +481,7 @@ footer {
 }
 
 footer span {
-  font-family: Open Sans;
+  font-family: Open Sans, Helvetica;
   color: #525f7f;
   font-size: 13px;
 }
@@ -591,4 +591,3 @@ footer span {
     padding-bottom: 50px;
   }
 }
-

@@ -95,8 +95,12 @@ video {
   transition: width 0.15s;
 }
 
+.languages {
+  margin: 35px 0;
+}
+
 .languages img {
-  margin-right: 10px;
+  margin-right: 15px;
   width: 35px;
   height: 35px;
 }
@@ -531,8 +535,14 @@ footer span {
     padding: 0 20px;
   }
 
-  .header-nav ul {
+  .header-nav {
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+
+  .languages {
+    margin-top: 0;
   }
 
   .name {
@@ -588,6 +598,11 @@ footer span {
 }
 
 @media screen and (max-width: 575px) {
+  .header-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .header-nav li {
     margin: 0 30px;
   }

@@ -17,7 +17,7 @@ $(document).ready(function () {
     ScrollReveal().reveal('.contact-links', { delay: 500 });
     ScrollReveal().reveal('#madeby', { delay: 500 });
     ScrollReveal().reveal('#currentYear', { delay: 500 });
-    
+
     // set the current year
     $('#currentYear').text(setCurrentYear());
 
@@ -112,7 +112,7 @@ $(document).ready(function () {
             {
                 "id" : "resume",
                 "input" : "> Gianluigi.resume",
-                "response" : "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-it.pdf\">cv-IT.pdf</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-en.pdf\">cv-EN.pdf</a>\"]",
+                "response" : "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-en.pdf\">cv-EN.pdf</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-it.pdf\">cv-IT.pdf</a>\"]",
             },
             {
                 "id" : "interests",

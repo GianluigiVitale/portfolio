@@ -209,7 +209,7 @@ $(document).ready(function () {
     }, {
       "id": "resume",
       "input": "> Gianluigi.resume",
-      "response": "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-it.pdf\">cv-IT.pdf</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-en.pdf\">cv-EN.pdf</a>\"]"
+      "response": "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-en.pdf\">cv-EN.pdf</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-it.pdf\">cv-IT.pdf</a>\"]"
     }, {
       "id": "interests",
       "input": "> Gianluigi.interests",

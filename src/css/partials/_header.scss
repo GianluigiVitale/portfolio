@@ -1,8 +1,11 @@
 .header-nav {
-    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0;
 
     ul {
-        @include flex-justify(flex-end);
+        display: flex;
     }
 
     li {
@@ -32,6 +35,19 @@
             background-color: #747fe0;
             content: '';
             transition: width 0.15s;
+        }
+    }
+}
+
+.languages {
+    img {
+        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+
+        &:hover {
+            opacity: 0.5;
+            cursor: pointer;
         }
     }
 }

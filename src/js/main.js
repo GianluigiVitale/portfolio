@@ -7,20 +7,25 @@ $(document).ready(function () {
 
     var sourceProjects = $("#project-template").html();     // handlebars project template
     var templateProject = Handlebars.compile(sourceProjects);
-    // fine templates
+    // end templates
 
+    // animations when opening the page
     textTerminal("#myName", "> Gianluigi Vitale");
     ScrollReveal().reveal('.description', { delay: 1500 });
     ScrollReveal().reveal('.header-nav', { delay: 2800 });
     ScrollReveal().reveal('#contact-me', { delay: 500 });
     ScrollReveal().reveal('.contact-links', { delay: 500 });
     ScrollReveal().reveal('#madeby', { delay: 500 });
+    ScrollReveal().reveal('#currentYear', { delay: 500 });
+    
+    // set the current year
     $('#currentYear').text(setCurrentYear());
 
-
+    // handlebars statements
     handelbarsStatements();
     animationsStatements();
 
+    // delay handlebars skills and projects
     setTimeout(function() {
         handelbarsSkills();
         animationsSkills();
@@ -32,35 +37,45 @@ $(document).ready(function () {
     }, 3500);
 
 
+    // when an 'A' tag is clicked
     $("#goSkills").click(function() {
-        var aid = $(this).attr("href");
-        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        slowScroll($(this));
     });
 
     $("#goProjects").click(function() {
-        var aid = $(this).attr("href");
-        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        slowScroll($(this));
     });
-    
+
     $("#goToProjects").click(function() {
-        var aid = $(this).attr("href");
-        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        slowScroll($(this));
     });
 
     $("#goContacts").click(function() {
-        var aid = $(this).attr("href");
-        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+        slowScroll($(this));
+    });
+
+
+    // to translate the website
+    $("#it").click(function() {
+        traduzioneItaliano();
+    });
+    $("#en").click(function() {
+        traduzioneInglese();
+        handelbarsStatements();
+        handelbarsProjects();
     });
 
 
 
     // FUNZIONI UTILIZZATE
 
+
+
     function setCurrentYear() {                 // returns the current year
         return new Date().getFullYear();
     }
 
-    function textTerminal(variable, name) {
+    function textTerminal(variable, name) {     // given a div and a text populates the div with the text imitating a user writing in a terminal
         var i = 0;
 
         var consoleTyper = setInterval(function () {
@@ -75,6 +90,8 @@ $(document).ready(function () {
 
 
     function handelbarsStatements() {           // populates the statements html thanks to handlebars
+        $('.statement-added').empty();
+
         // array of statements
         var dataStatements = [
             {
@@ -105,7 +122,7 @@ $(document).ready(function () {
             {
                 "id" : "education",
                 "input" : "> Gianluigi.education",
-                "response" : "[\"Boolean Careers\", \"Liceo Scientifico S.Cannizzaro\"]",
+                "response" : "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.boolean.careers/\">Boolean Careers</a>\", \"Liceo Scientifico S.Cannizzaro\"]",
             }
         ];
 
@@ -207,6 +224,8 @@ $(document).ready(function () {
 
 
     function handelbarsProjects() {           // populates the projects html thanks to handlebars
+        $('.project-container').empty();
+
         // array of projects
         var dataProjects = [
             {
@@ -270,7 +289,7 @@ $(document).ready(function () {
                 "linkGitHub" : "https://github.com/GianluigiVitale/ajax-ex-calendar"
             },
             {
-                "id" : "albums",
+                "id" : "dashboard",
                 "video" : "assets/videos/7chartbool.mp4",
                 "title" : "ChartBool",
                 "description" : "Dashboard of a company's Key Performance Indicator. The data are taken from an API whereas the charts are made with ChartJS. It is possible to add a sale by selecting the salesman, the month and the amount.",
@@ -280,7 +299,7 @@ $(document).ready(function () {
                 "linkGitHub" : "https://github.com/GianluigiVitale/rest-chartbool"
             },
             {
-                "id" : "minefield",
+                "id" : "albums",
                 "video" : "assets/videos/8dischi.mp4",
                 "title" : "Albums",
                 "description" : "Website to show the infos of different albums taken from an API. It is possible to filter the songs by genre. The site supports mobile, tablet, and desktop sizes.",
@@ -290,7 +309,7 @@ $(document).ready(function () {
                 "linkGitHub" : "https://github.com/GianluigiVitale/php-ajax-dischi"
             },
             {
-                "id" : "digital",
+                "id" : "minefield",
                 "video" : "assets/videos/9campominato.mp4",
                 "title" : "Minefield",
                 "description" : "Game to test your luck! <br> The computer generates 16 random numbers from 1 to 100. The user enters one number at a time between 1 to 100. If the number is present in the list of generated numbers, the game ends, otherwise the game continues by asking the user for another number. The game ends when the player enters a \"forbidden\" number or reaches the maximum possible numbers of numbers allowed. At the end of the match the software communicates the score, i.e. the number of times that the user has entered an allowed number. The user can also select the difficulty that determines the maximum number.",
@@ -300,6 +319,7 @@ $(document).ready(function () {
                 "linkGitHub" : "https://github.com/GianluigiVitale/js-campominato"
             },
             {
+                "id" : "digital",
                 "video" : "assets/videos/10digitalocean.mp4",
                 "title" : "Digital Ocean",
                 "description" : "Replica of the landing page of DigitalOcean, made with Bootstrap. The site supports mobile, tablet, and desktop sizes.",
@@ -342,5 +362,63 @@ $(document).ready(function () {
         ScrollReveal().reveal('#albums', { delay: 300 });
         ScrollReveal().reveal('#minefield', { delay: 300 });
         ScrollReveal().reveal('#digital', { delay: 300 });
+    }
+
+
+    function slowScroll(value) {            // scrolls to the given div slowly
+        var aid = $(value).attr("href");
+        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+    }
+
+    function traduzioneItaliano() {             // translates the website in italian
+        $('#goSkills').text('Competenze');
+        $('#goProjects').text('Progetti');
+        $('#goContacts').text('Contatti');
+        $('#description').html('Sono uno sviluppatore web full-stack. La mia passione è realizzare semplici e belle esperienze per gli utenti. <br> Dai un occhiata ai miei <a href="#projects" id="goToProjects">progetti</a> qui sotto.');
+        $('#location').find('.statement-input p').text('> Gianluigi.ubicazioneAttuale');
+        $('#des-location').find('.statement-input p').text('> Gianluigi.ubicazioneDesiderata');
+        $('#des-location').find('.statement-response p').text('Milano, IT');
+        $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
+        $('#resume').find('.statement-input p').text('> Gianluigi.curriculum');
+        $('#interests').find('.statement-input p').text('> Gianluigi.interessi');
+        $('#interests').find('.statement-response p').text('["Programmazione", "Economia", "Lettura", "Meccanica"]');
+        $('#education').find('.statement-input p').text('> Gianluigi.formazione');
+
+        $('#skills').find('h2').text('Competenze');
+
+        $('.view-source').find('span').text('Visualizza Codice');
+        $('.live-demo').find('span').text('Visualizza Demo');
+
+        $('#projects').find('h2').text('Progetti');
+
+        $('#boolbnb').find('.project-content p').text('Realizzazione di una complessa applicazione Web ispirata ad Airbnb, formata da Backend (Autenticazione a più ruoli, Integrazione Payment Provider, Geolocation API) e interfaccia Frontend responsive.');
+        $('#boolzap').find('.project-content p').text('Progetto ispirato a WhatsApp Web. È possibile inviare messaggi a diversi contatti che dopo un secondo risponderanno con un buffo messaggio casuale. Il sito è compatibile con i formati cellulari, tablet e desktop.');
+        $('#teambit').find('.project-content p').text('Replica completa della landing page di teambit.io. Ogni elemento è stato replicato dall\'hamburger menu alla finestra della live chat. Il sito è compatibile con i formati cellulari, tablet e desktop.');
+        $('#boolflix').find('.project-content p').text('Boolflix permette di ottenere informazioni su film/serie tv. Per esempio, cercando \'Star Wars\' si ottengono tutti i film/serie tv che includono \'Star Wars\' nel titolo. Il sito è compatibile con i formati cellulari, tablet e desktop.');
+        $('#challenges').find('.project-content h3').text('100+ Esercizi Svolti di PHP');
+        $('#challenges').find('.project-content p').text('Questa repository contiene le mie soluzioni a diversi esercizi che ho svolto di PHP presi dal sito codewars.com. Considerando anche JavaScript ho svolto 166 esercizi, classificandomi al 94° percentile.');
+        $('#calendar').find('.project-content h3').text('Calendario delle festività');
+        $('#calendar').find('.project-content p').text('Calendario delle festività del 2018. I giorni del mese sono generati grazie a MomentJS e Handlebars e grazie a una richiesta ajax vengono aggiunti i giorni festivi. Il sito è compatibile con i formati cellulari, tablet e desktop.');
+        $('#dashboard').find('.project-content p').text('Dashboard dei Key Performance Indicator di una società. I dati sono presi da una API mentre i grafici sono realizzati con ChartJS. È possibile aggiungere una vendita selezionando il venditore, il mese e l\'importo.');
+        $('#albums').find('.project-content p').text('Sito web per mostrare le informazioni di diversi album presi da un API. È possibile filtrare le canzoni per genere. Il sito è compatibile con i formati cellulari, tablet e desktop.');
+        $('#minefield').find('.project-content p').text('Il computer genera 16 numeri casuali tra 1 e 100. In seguito chiede all’utente di inserire un numero alla volta, sempre compreso tra 1 e 100. Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero. La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti. Al termine della partita il software comunica il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito. L\'utente può anche selezionare la difficoltà che determina la dimensione del campo (il numero massimo).');
+        $('#digital').find('.project-content p').text('Replica della landing page di Digital Ocean sviluppata con Bootstrap. Il sito è compatibile con i formati cellulari, tablet e desktop.');
+
+        $('#contact').find('h2').text('Contatti');
+        $('#madeby').text('Creato da Gianluigi Vitale © ');
+    }
+
+    function traduzioneInglese() {              // translates the website in english
+        $('#goSkills').text('Skills');
+        $('#goProjects').text('Projects');
+        $('#goContacts').text('Contact');
+
+        $('#description').html('I am a full-stack web developer. My passion is building simple, beautiful user experiences. <br> Check out my <a href="#projects" id="goToProjects">side-projects</a> below.');
+
+        $('#skills').find('h2').text('Skills');
+        $('#projects').find('h2').text('Projects');
+
+        $('#contact').find('h2').text('Contact');
+        $('#madeby').text('Made by Gianluigi Vitale © ');
     }
 });

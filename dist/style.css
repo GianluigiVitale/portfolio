@@ -53,12 +53,14 @@ video {
 /* HEADER */
 
 .header-nav {
-  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px 0;
 }
 
 .header-nav ul {
   display: flex;
-  justify-content: flex-end;
 }
 
 .header-nav li {
@@ -91,6 +93,17 @@ video {
   background-color: #747fe0;
   content: "";
   transition: width 0.15s;
+}
+
+.languages img {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+}
+
+.languages img:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 /* FINE HEADER */

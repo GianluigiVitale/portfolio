@@ -20,6 +20,10 @@
         <header>
             <div class="container">
                 <nav class="header-nav">
+                    <div class="languages">
+                        <img id="it" src="assets/it.png" alt="it">
+                        <img id="en" src="assets/en.png" alt="en">
+                    </div>
                     <ul>
                         <li><a href="#skills" id="goSkills">Skills</a></li>
                         <li><a href="#projects" id="goProjects">Projects</a></li>
@@ -35,7 +39,7 @@
                     <span class="input" id="name-input">&nbsp;&nbsp;</span>
                 </div>
                 <div class="description">
-                    <p>I am a full-stack web developer. My passion is building simple, beautiful user experiences. <br> Check out my <a href="#projects" id="goToProjects">side-projects</a> below.</p>
+                    <p id="description">I am a full-stack web developer. My passion is building simple, beautiful user experiences. <br> Check out my <a href="#projects" id="goToProjects">side-projects</a> below.</p>
                 </div>
                 <div class="about">
                     <div class="terminal">
@@ -89,7 +93,7 @@
             </div>
         </section>
         <footer>
-            <span id="madeby">Made by Gianluigi Vitale © <span id="currentYear"></span></span>
+            <span id="madeby">Made by Gianluigi Vitale © </span><span id="currentYear"></span>
         </footer>
 
 
@@ -132,12 +136,13 @@
                         {{{skills}}}
                     </div>
                     <div class="project-links">
-                        <a class="live-demo" style="display: {{liveDisplay}}" target="_blank" rel="noopener noreferrer" href="{{linkLive}}">Live Demo
+                        <a class="live-demo" style="display: {{liveDisplay}}" target="_blank" rel="noopener noreferrer" href="{{linkLive}}">
+                            <span>Live Demo</span>
                             <img src="assets/arrow.png" alt="arrow">
                         </a>
                         <a class="view-source" target="_blank" rel="noopener noreferrer" href="{{linkGitHub}}">
                             <img src="assets/try.png" alt="github">
-                            View Source
+                            <span>View Source</span>
                         </a>
                     </div>
                 </div>

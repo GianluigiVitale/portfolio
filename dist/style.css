@@ -541,6 +541,10 @@ footer span {
     align-items: center;
   }
 
+  video {
+    max-height: 398px;
+  }
+
   .languages {
     margin-top: 0;
   }
@@ -607,6 +611,10 @@ footer span {
     margin: 0 30px;
   }
 
+  video {
+    max-height: 290px;
+  }
+
   #myName {
     font-size: 26px;
   }
@@ -622,6 +630,12 @@ footer span {
   .skills-icon div {
     width: 100%;
     padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  video {
+    max-height: 190px;
   }
 }
 

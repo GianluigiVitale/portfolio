@@ -112,7 +112,7 @@ $(document).ready(function () {
             {
                 "id" : "resume",
                 "input" : "> Gianluigi.resume",
-                "response" : "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-en.pdf\">cv-EN.pdf</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/cv-it.pdf\">cv-IT.pdf</a>\"]",
+                "response" : "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/CV_Gianluigi_Vitale.pdf\">cv-EN.pdf</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/CV_Gianluigi_Vitale_it.pdf\">cv-IT.pdf</a>\"]",
             },
             {
                 "id" : "interests",

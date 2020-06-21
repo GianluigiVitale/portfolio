@@ -347,7 +347,7 @@ $(document).ready(function () {
       "id": "boolbnb",
       "video": "assets/videos/1not-available.mp4",
       "title": "BoolBnB",
-      "description": "Realization of a complex Web application inspired by Airbnb, formed by Backend (Multi-auth Users and Roles, Payment Provider Integration and Geolocation API) and responsive Frontend interface.",
+      "description": "BoolBnB is an application to find and manage apartment rentals. Users who want to rent an apartment once registered can create an ad. Users interested in an apartment, using the filters of a search page, see a list of possible apartments and by clicking on each one it's possible to see a detailed page. The user can contact the owner to ask questions. In addition, the owners of an apartment can pay to sponsor the ad of an apartment and make it more visible.",
       "skills": "<span class='project-skill'>HTML5</span><span class='project-skill'>SCSS</span><span class='project-skill'>JavaScript</span><span class='project-skill'>jQuery</span><span class='project-skill'>PHP</span><span class='project-skill'>Laravel</span><span class='project-skill'>MySQL</span>",
       "liveDisplay": "none",
       "linkLive": "https://github.com/GianluigiVitale/BoolBnB",
@@ -512,7 +512,7 @@ $(document).ready(function () {
     $('.view-source').find('span').text('Visualizza Codice');
     $('.live-demo').find('span').text('Visualizza Demo');
     $('#projects').find('h2').text('Progetti');
-    $('#boolbnb').find('.project-content p').text('Realizzazione di una complessa applicazione Web ispirata ad Airbnb, formata da Backend (Autenticazione a più ruoli, Integrazione Payment Provider, Geolocation API) e interfaccia Frontend responsive.');
+    $('#boolbnb').find('.project-content p').text('BoolBnB è un\'applicazione per trovare e gestire l’affitto di appartamenti. Gli utenti che vogliono mettere in affitto un appartamento una volta registrati possono creare un annuncio. Gli utenti interessati ad un appartamento, utilizzando i filtri di una apposita pagina di ricerca, vedono una lista di possibili appartamenti e cliccando su ognuno possono vedere una pagina di dettaglio. L’utente può contattare il proprietario per fare domande. Inoltre, i proprietari di un appartamento possono pagare per sponsorizzare l’annuncio del proprio appartamento e renderlo maggiormente in evidenza.');
     $('#boolzap').find('.project-content p').text('Progetto ispirato a WhatsApp Web. È possibile inviare messaggi a diversi contatti che dopo un secondo risponderanno con un buffo messaggio casuale. Il sito è compatibile con i formati cellulari, tablet e desktop.');
     $('#teambit').find('.project-content p').text('Replica completa della landing page di teambit.io. Ogni elemento è stato replicato dall\'hamburger menu alla finestra della live chat. Il sito è compatibile con i formati cellulari, tablet e desktop.');
     $('#boolflix').find('.project-content p').text('Boolflix permette di ottenere informazioni su film/serie tv. Per esempio, cercando \'Star Wars\' si ottengono tutti i film/serie tv che includono \'Star Wars\' nel titolo. Il sito è compatibile con i formati cellulari, tablet e desktop.');

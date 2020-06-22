@@ -232,7 +232,7 @@ $(document).ready(function () {
                 "id" : "boolbnb",
                 "video" : "assets/videos/1not-available.mp4",
                 "title" : "BoolBnB",
-                "description" : "BoolBnB is an application to find and manage apartment rentals. Users who want to rent an apartment once registered can create an ad. Users interested in an apartment, using the filters of a search page, see a list of possible apartments and by clicking on each one it's possible to see a detailed page. The user can contact the owner to ask questions. In addition, the owners of an apartment can pay to sponsor the ad of an apartment and make it more visible.",
+                "description" : "BoolBnB is an application to find and manage apartment rentals. Users who want to rent an apartment once registered can create an ad. Users interested in an apartment, using the filters of a search page, see a list of possible apartments and by clicking on each one it's possible to see a detailed page. The user can contact the owner to ask questions. In addition, the owners of an apartment can pay to sponsor the ad of an apartment to make it more visible.",
                 "skills" : "<span class='project-skill'>HTML5</span><span class='project-skill'>SCSS</span><span class='project-skill'>JavaScript</span><span class='project-skill'>jQuery</span><span class='project-skill'>PHP</span><span class='project-skill'>Laravel</span><span class='project-skill'>MySQL</span>",
                 "liveDisplay" : "none",
                 "linkLive" : "https://github.com/GianluigiVitale/BoolBnB",

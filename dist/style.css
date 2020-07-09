@@ -292,15 +292,15 @@ video {
   width: auto;
 }
 
-#php img {
-  width: 90px;
+#php-laravel img {
+  width: 165px;
   position: relative;
   top: 12px;
 }
 
-#php p {
+#php-laravel p {
   position: relative;
-  top: 16px;
+  top: 12px;
 }
 
 #mysql img {

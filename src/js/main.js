@@ -175,22 +175,22 @@ $(document).ready(function () {
                 "textSkill" : "VueJS"
             },
             {
-                "id" : "php",
-                "pathSkill" : "assets/skills/php.svg",
-                "altSkill" : "php",
-                "textSkill" : "PHP"
-            },
-            {
-                "id" : "laravel",
-                "pathSkill" : "assets/skills/laravel.png",
-                "altSkill" : "laravel",
-                "textSkill" : "Laravel"
+                "id" : "php-laravel",
+                "pathSkill" : "assets/skills/php-laravel.png",
+                "altSkill" : "php-laravel",
+                "textSkill" : "PHP, Laravel"
             },
             {
                 "id" : "mysql",
                 "pathSkill" : "assets/skills/mysql.png",
                 "altSkill" : "mysql",
                 "textSkill" : "MySQL, SQL"
+            },
+            {
+                "id" : "python",
+                "pathSkill" : "assets/skills/python.png",
+                "altSkill" : "Python",
+                "textSkill" : "Python"
             }
         ];
 
@@ -217,9 +217,9 @@ $(document).ready(function () {
         ScrollReveal().reveal('#html', { delay: 400 });
         ScrollReveal().reveal('#js-jquery', { delay: 500 });
         ScrollReveal().reveal('#vuejs', { delay: 600 });
-        ScrollReveal().reveal('#php', { delay: 700 });
-        ScrollReveal().reveal('#laravel', { delay: 800 });
-        ScrollReveal().reveal('#mysql', { delay: 900 });
+        ScrollReveal().reveal('#php-laravel', { delay: 700 });
+        ScrollReveal().reveal('#mysql', { delay: 800 });
+        ScrollReveal().reveal('#python', { delay: 900 });
     }
 
 
@@ -272,11 +272,21 @@ $(document).ready(function () {
                 "id" : "challenges",
                 "video" : "assets/videos/5php-challenges.mp4",
                 "title" : "100+ PHP Solved challenges",
-                "description" : "This repository contains my solutions of PHP challenges I solved from the website <a class=\"link\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.codewars.com/\">codewars.com</a> <br> I solved 166 challenges including JavaScript, ranking me 94th percentile.",
+                "description" : "This repository contains my solutions of PHP challenges I solved from the website <a class=\"link\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.codewars.com/\">codewars.com</a> <br> I solved 174 challenges including JavaScript and Python, ranking me 95th percentile.",
                 "skills" : "<span class='project-skill'>PHP</span>",
                 "liveDisplay" : "none",
                 "linkLive" : "https://github.com/GianluigiVitale/PHP-Challenges",
                 "linkGitHub" : "https://github.com/GianluigiVitale/PHP-Challenges"
+            },
+            {
+                "id" : "minefield",
+                "video" : "assets/videos/9campominato.mp4",
+                "title" : "Minefield",
+                "description" : "Game to test your luck! <br> The computer generates 16 random numbers from 1 to 100. The user enters one number at a time between 1 to 100. If the number is present in the list of generated numbers, the game ends, otherwise the game continues by asking the user for another number. The game ends when the player enters a \"forbidden\" number or reaches the maximum possible numbers of numbers allowed. At the end of the match the software communicates the score, i.e. the number of times that the user has entered an allowed number. The user can also select the difficulty that determines the maximum number. <br><br> I have created 2 versions of the game, one with JavaScript (playable in the browser) and the other with Python.",
+                "skills" : "<span class='project-skill'>JavaScript</span><span class='project-skill'>jQuery</span><span class='project-skill'>Python</span>",
+                "liveDisplay" : "flex",
+                "linkLive" : "https://gianluigivitale.github.io/js-py-campominato/",
+                "linkGitHub" : "https://github.com/GianluigiVitale/js-py-campominato"
             },
             {
                 "id" : "calendar",
@@ -307,16 +317,6 @@ $(document).ready(function () {
                 "liveDisplay" : "none",
                 "linkLive" : "https://github.com/GianluigiVitale/php-ajax-dischi",
                 "linkGitHub" : "https://github.com/GianluigiVitale/php-ajax-dischi"
-            },
-            {
-                "id" : "minefield",
-                "video" : "assets/videos/9campominato.mp4",
-                "title" : "Minefield",
-                "description" : "Game to test your luck! <br> The computer generates 16 random numbers from 1 to 100. The user enters one number at a time between 1 to 100. If the number is present in the list of generated numbers, the game ends, otherwise the game continues by asking the user for another number. The game ends when the player enters a \"forbidden\" number or reaches the maximum possible numbers of numbers allowed. At the end of the match the software communicates the score, i.e. the number of times that the user has entered an allowed number. The user can also select the difficulty that determines the maximum number.",
-                "skills" : "<span class='project-skill'>JavaScript</span><span class='project-skill'>jQuery</span>",
-                "liveDisplay" : "flex",
-                "linkLive" : "https://gianluigivitale.github.io/js-campominato/",
-                "linkGitHub" : "https://github.com/GianluigiVitale/js-campominato"
             },
             {
                 "id" : "digital",

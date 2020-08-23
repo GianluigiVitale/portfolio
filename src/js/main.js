@@ -101,8 +101,8 @@ $(document).ready(function () {
             },
             {
                 "id" : "des-location",
-                "input" : "> Gianluigi.desiredLocation",
-                "response" : "Milan, IT",
+                "input" : "> Gianluigi.willingToRelocate",
+                "response" : "Yes",
             },
             {
                 "id" : "info",
@@ -376,8 +376,8 @@ $(document).ready(function () {
         $('#goContacts').text('Contatti');
         $('#description').html('Sono uno sviluppatore web full-stack. La mia passione è realizzare semplici e belle esperienze per gli utenti. <br> Dai un occhiata ai miei <a href="#projects" id="goToProjects">progetti</a> qui sotto.');
         $('#location').find('.statement-input p').text('> Gianluigi.ubicazioneAttuale');
-        $('#des-location').find('.statement-input p').text('> Gianluigi.ubicazioneDesiderata');
-        $('#des-location').find('.statement-response p').text('Milano, IT');
+        $('#des-location').find('.statement-input p').text('> Gianluigi.disponibilitàAlTrasferimento');
+        $('#des-location').find('.statement-response p').text('Si');
         $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
         $('#resume').find('.statement-input p').text('> Gianluigi.curriculum');
         $('#interests').find('.statement-input p').text('> Gianluigi.interessi');

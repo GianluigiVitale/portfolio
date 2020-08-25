@@ -117,7 +117,7 @@ $(document).ready(function () {
             {
                 "id" : "interests",
                 "input" : "> Gianluigi.interests",
-                "response" : "[\"Coding\", \"Economics\", \"Reading\", \"Mechanics\"]",
+                "response" : "[\"Coding\", \"Bowling\", \"Economics\", \"Reading\", \"Mechanics\"]",
             },
             {
                 "id" : "education",
@@ -381,7 +381,7 @@ $(document).ready(function () {
         $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
         $('#resume').find('.statement-input p').text('> Gianluigi.curriculum');
         $('#interests').find('.statement-input p').text('> Gianluigi.interessi');
-        $('#interests').find('.statement-response p').text('["Programmazione", "Economia", "Lettura", "Meccanica"]');
+        $('#interests').find('.statement-response p').text('["Programmazione", "Bowling", "Economia", "Lettura", "Meccanica"]');
         $('#education').find('.statement-input p').text('> Gianluigi.formazione');
 
         $('#skills').find('h2').text('Competenze');

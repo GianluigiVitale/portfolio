@@ -283,13 +283,17 @@ video {
 }
 
 #html img {
-  width: 128px;
+  width: 200px;
   height: 85px;
 }
 
 #js-jquery img {
   height: 80px;
   width: auto;
+}
+
+#js-jquery p {
+  padding-top: 12px;
 }
 
 #php-laravel img {
@@ -305,6 +309,14 @@ video {
 
 #mysql img {
   width: 105px;
+}
+
+#vuejs img {
+  width: 150px;
+}
+
+#vuejs p {
+  padding-top: 15px;
 }
 
 #mysql p {

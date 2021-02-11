@@ -213,7 +213,7 @@ $(document).ready(function () {
     }, {
       "id": "interests",
       "input": "> Gianluigi.interests",
-      "response": "[\"Coding\", \"Bowling\", \"Economics\", \"Reading\", \"Mechanics\"]"
+      "response": "[\"Coding\", \"Economics\", \"Reading\", \"Bowling\", \"Mechanics\"]"
     }, {
       "id": "education",
       "input": "> Gianluigi.education",
@@ -267,7 +267,7 @@ $(document).ready(function () {
       "id": "html",
       "pathSkill": "assets/skills/html.png",
       "altSkill": "html/css",
-      "textSkill": "HTML5, CSS3"
+      "textSkill": "HTML5, CSS3, SCSS"
     }, {
       "id": "js-jquery",
       "pathSkill": "assets/skills/js-jquery.png",
@@ -277,7 +277,12 @@ $(document).ready(function () {
       "id": "vuejs",
       "pathSkill": "assets/skills/vuejs.png",
       "altSkill": "vuejs",
-      "textSkill": "VueJS"
+      "textSkill": "VueJS,Angular"
+    }, {
+      "id": "ionic",
+      "pathSkill": "assets/skills/ionic.png",
+      "altSkill": "Ionic",
+      "textSkill": "Ionic"
     }, {
       "id": "php-laravel",
       "pathSkill": "assets/skills/php-laravel.png",
@@ -288,11 +293,6 @@ $(document).ready(function () {
       "pathSkill": "assets/skills/mysql.png",
       "altSkill": "mysql",
       "textSkill": "MySQL, SQL"
-    }, {
-      "id": "python",
-      "pathSkill": "assets/skills/python.png",
-      "altSkill": "Python",
-      "textSkill": "Python"
     }]; // handlebars template with data
 
     for (var key in dataSkills) {
@@ -328,13 +328,13 @@ $(document).ready(function () {
     ScrollReveal().reveal('#vuejs', {
       delay: 600
     });
-    ScrollReveal().reveal('#php-laravel', {
+    ScrollReveal().reveal('#ionic', {
       delay: 700
     });
-    ScrollReveal().reveal('#mysql', {
+    ScrollReveal().reveal('#php-laravel', {
       delay: 800
     });
-    ScrollReveal().reveal('#python', {
+    ScrollReveal().reveal('#mysql', {
       delay: 900
     });
   }
@@ -506,7 +506,7 @@ $(document).ready(function () {
     $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
     $('#resume').find('.statement-input p').text('> Gianluigi.curriculum');
     $('#interests').find('.statement-input p').text('> Gianluigi.interessi');
-    $('#interests').find('.statement-response p').text('["Programmazione", "Bowling", "Economia", "Lettura", "Meccanica"]');
+    $('#interests').find('.statement-response p').text('["Programmazione", "Economia", "Leggere", "Bowling", "Meccanica"]');
     $('#education').find('.statement-input p').text('> Gianluigi.formazione');
     $('#skills').find('h2').text('Competenze');
     $('.view-source').find('span').text('Visualizza Codice');

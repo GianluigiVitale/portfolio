@@ -386,13 +386,13 @@ $(document).ready(function () {
         $('#goProjects').text('Progetti');
         $('#goContacts').text('Contatti');
         $('#description').html('Sono uno sviluppatore web full-stack. La mia passione è realizzare semplici e belle esperienze per gli utenti. <br> Dai un occhiata ai miei <a href="#projects" id="goToProjects">progetti</a> qui sotto.');
-        $('#location').find('.statement-input p').text('> Gianluigi.ubicazioneAttuale');
+        $('#location').find('.statement-input p').text('> Gianluigi.cittàAttuale');
         $('#des-location').find('.statement-input p').text('> Gianluigi.disponibilitàAlTrasferimento');
         $('#des-location').find('.statement-response p').text('Si');
         $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
         $('#resume').find('.statement-input p').text('> Gianluigi.curriculum');
         $('#interests').find('.statement-input p').text('> Gianluigi.interessi');
-        $('#interests').find('.statement-response p').text('["Programmazione", "Economia", "Leggere", "Bowling", "Meccanica"]');
+        $('#interests').find('.statement-response p').text('["Informatica", "Natura", "Bowling", "Go Kart", "Animali"]');
         $('#education').find('.statement-input p').text('> Gianluigi.formazione');
 
         $('#skills').find('h2').text('Competenze');

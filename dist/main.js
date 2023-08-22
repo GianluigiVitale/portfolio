@@ -213,7 +213,7 @@ $(document).ready(function () {
     }, {
       "id": "interests",
       "input": "> Gianluigi.interests",
-      "response": "[\"Coding\", \"Economics\", \"Reading\", \"Bowling\", \"Mechanics\"]"
+      "response": "[\"Coding\", \"Nature\", \"Bowling\", \"Go Kart\", \"Animals\"]",
     }, {
       "id": "education",
       "input": "> Gianluigi.education",
@@ -518,7 +518,7 @@ $(document).ready(function () {
     $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
     $('#resume').find('.statement-input p').text('> Gianluigi.curriculum');
     $('#interests').find('.statement-input p').text('> Gianluigi.interessi');
-    $('#interests').find('.statement-response p').text('["Programmazione", "Economia", "Leggere", "Bowling", "Meccanica"]');
+    $('#interests').find('.statement-response p').text('["Informatica", "Natura", "Bowling", "Go Kart", "Animali"]');
     $('#education').find('.statement-input p').text('> Gianluigi.formazione');
     $('#skills').find('h2').text('Competenze');
     $('.view-source').find('span').text('Visualizza Codice');

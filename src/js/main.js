@@ -117,7 +117,7 @@ $(document).ready(function () {
             {
                 "id" : "interests",
                 "input" : "> Gianluigi.interests",
-                "response" : "[\"Coding\", \"Economics\", \"Reading\", \"Bowling\", \"Mechanics\"]",
+                "response" : "[\"Coding\", \"Nature\", \"Bowling\", \"Go Kart\", \"Animals\"]",
             },
             {
                 "id" : "education",

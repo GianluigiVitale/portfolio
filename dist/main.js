@@ -512,7 +512,7 @@ $(document).ready(function () {
     $('#goProjects').text('Progetti');
     $('#goContacts').text('Contatti');
     $('#description').html('Amante dell'informatica a 360 gradi. Mi piace imparare cose nuove e affrontare nuove sfide. <br> Dai un occhiata ai miei <a href="#projects" id="goToProjects">progetti</a> qui sotto.');
-    $('#location').find('.statement-input p').text('> Gianluigi.cittàAttuale');
+    $('#location').find('.statement-input p').text('> Gianluigi.residenzaAttuale');
     $('#des-location').find('.statement-input p').text('> Gianluigi.disponibilitàAlTrasferimento');
     $('#des-location').find('.statement-response p').text('Si');
     $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');

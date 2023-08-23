@@ -546,7 +546,7 @@ $(document).ready(function () {
     $('#goSkills').text('Skills');
     $('#goProjects').text('Projects');
     $('#goContacts').text('Contact');
-    $('#description').html('I am a full-stack web developer. My passion is building simple, beautiful user experiences. <br> Check out my <a href="#projects" id="goToProjects">side-projects</a> below.');
+    $('#description').html('All-around IT lover. I enjoy learning new things and taking on new challenges. <br> Check out my <a href="#projects" id="goToProjects">side-projects</a> below.');
     $('#skills').find('h2').text('Skills');
     $('#projects').find('h2').text('Projects');
     $('#contact').find('h2').text('Contact');

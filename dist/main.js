@@ -511,8 +511,8 @@ $(document).ready(function () {
     $('#goSkills').text('Competenze');
     $('#goProjects').text('Progetti');
     $('#goContacts').text('Contatti');
-    $('#description').html('Sono uno sviluppatore web full-stack. La mia passione è realizzare semplici e belle esperienze per gli utenti. <br> Dai un occhiata ai miei <a href="#projects" id="goToProjects">progetti</a> qui sotto.');
-    $('#location').find('.statement-input p').text('> Gianluigi.ubicazioneAttuale');
+    $('#description').html('Amante dell'informatica a 360 gradi. Mi piace imparare cose nuove e affrontare nuove sfide. <br> Dai un occhiata ai miei <a href="#projects" id="goToProjects">progetti</a> qui sotto.');
+    $('#location').find('.statement-input p').text('> Gianluigi.cittàAttuale');
     $('#des-location').find('.statement-input p').text('> Gianluigi.disponibilitàAlTrasferimento');
     $('#des-location').find('.statement-response p').text('Si');
     $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');

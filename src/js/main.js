@@ -478,9 +478,9 @@ $(document).ready(function () {
 
     function traduzioneItaliano() {             // translates the website in italian
         $('#goResearch').text('Ricerca');
-        $('#goTimeline').text('Cronologia');
+        $('#goTimeline').text('Esperienze');
         $('#goContacts').text('Contatti');
-        $('#description').html('Ricercatore in ML Systems. <strong>Primo studente undergraduate come unico autore</strong> alla MLSys 2026 — il primo nella storia di nove anni della conferenza. Sviluppo infrastrutture di misurazione per sistemi di serving LLM. Candidatura per PhD autunno 2027 in ML Systems.');
+        $('#description').html('Ricercatore in ML Systems. <strong>Primo studente universitario unico autore</strong> alla MLSys 2026 — il primo nella storia di nove anni della conferenza. Sviluppo infrastrutture di misurazione per sistemi di serving LLM. Candidatura per PhD autunno 2027 in ML Systems.');
         $('#location').find('.statement-input p').text('> Gianluigi.posizioneAttuale');
         $('#affiliation').find('.statement-input p').text('> Gianluigi.affiliazione');
         $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
@@ -494,7 +494,7 @@ $(document).ready(function () {
 
         $('#research').find('h2').text('Interessi di Ricerca');
         $('#title-paper').text('Pubblicazione in Evidenza');
-        $('#title-timeline').text('Cronologia');
+        $('#title-timeline').text('Esperienze');
 
         // Update research area titles
         $('#llm-serving').find('h3').text('Infrastruttura LLM Serving');
@@ -513,14 +513,14 @@ $(document).ready(function () {
         $('.paper-desc').text('Un framework di misurazione e modello predittivo (PRI) per infrastructure drift nei sistemi di serving LLM. Dimostra un tasso di inversione di sicurezza del 23,85% nella migrazione H100→B200. Tre percorsi di valutazione autonomi: caso di studio GPU in produzione, riaddestramento PRI solo CPU e verifica numerica automatizzata di tutte le 34 affermazioni.');
 
         // Update timeline items
-        $('#mlsys2026').find('h3').text('MLSys 2026 · Bellevue, WA');
-        $('#mlsys2026').find('p').text('Presentazione di DriftBench. Membro del Comitato di Valutazione degli Artefatti. Unico studente undergraduate come unico autore nella storia di nove anni della conferenza.');
-        $('#predoctoral').find('h3').text('Ponte pre-dottorato');
-        $('#predoctoral').find('p').text('Proposta di workshop NeurIPS 2026 (co-organizzato con CNR-ICAR). Posizioni di ricercatore in visita. Candidature PhD autunno 2027 — ML Systems, programmi USA.');
-        $('#degree').find('h3').text('Laurea in Ingegneria Informatica');
-        $('#degree').find('p').text('Università Telematica Universitas Mercatorum · Media 29/30 · Prevista Febbraio 2027.');
-        $('#work').find('h3').text('Archivio di Stato di Pistoia');
-        $('#work').find('p').text('Assistente ai Servizi Statistico Informativi · Ministero della Cultura. Ho creato il primo sistema AI RAG per un archivio di stato italiano per consultare documenti interni per i visitatori.');
+        $('#mlsys2026 .timeline-content h3').text('MLSys 2026 · Bellevue, WA');
+        $('#mlsys2026 .timeline-content p').text('Presentazione di DriftBench. Membro del Comitato di Valutazione degli Artefatti. Unico studente undergraduate come unico autore nella storia di nove anni della conferenza.');
+        $('#predoctoral .timeline-content h3').text('Ponte pre-dottorato');
+        $('#predoctoral .timeline-content p').text('Proposta di workshop NeurIPS 2026 (co-organizzato con CNR-ICAR). Posizioni di ricercatore in visita. Candidature PhD autunno 2027 — ML Systems, programmi USA.');
+        $('#degree .timeline-content h3').text('Laurea in Ingegneria Informatica');
+        $('#degree .timeline-content p').text('Università Telematica Universitas Mercatorum · Media 29/30 · Prevista Febbraio 2027.');
+        $('#work .timeline-content h3').text('Archivio di Stato di Pistoia');
+        $('#work .timeline-content p').text('Assistente ai Servizi Statistico Informativi · Ministero della Cultura. Ho creato il primo sistema AI RAG per un archivio di stato italiano per consultare documenti interni per i visitatori.');
 
         $('#contact').find('h2').text('Contatti');
         $('#madeby').text('Creato da Gianluigi Vitale ');
@@ -565,14 +565,14 @@ $(document).ready(function () {
         $('.paper-desc').text('A measurement framework and predictive model (PRI) for infrastructure drift in LLM serving systems. Demonstrates a 23.85% safety flip rate on H100→B200 migration. Three self-contained evaluation paths: GPU production case study, CPU-only PRI retraining, and automated numerical verification of all 34 claims.');
 
         // Reset timeline items to English
-        $('#mlsys2026').find('h3').text('MLSys 2026 · Bellevue, WA');
-        $('#mlsys2026').find('p').text('Presenting DriftBench. Artifact Evaluation Committee member. Sole undergraduate sole-author in the conference’s nine-year history.');
-        $('#predoctoral').find('h3').text('Pre-doctoral bridge');
-        $('#predoctoral').find('p').text('NeurIPS 2026 workshop proposal (co-organized with CNR-ICAR). Visiting researcher positions. Fall 2027 PhD applications — ML Systems, US programs.');
-        $('#degree').find('h3').text('B.Eng. Computer Engineering');
-        $('#degree').find('p').text('Università Telematica Universitas Mercatorum · GPA 3.87/4.00 · Expected February 2027.');
-        $('#work').find('h3').text('Archivio di Stato di Pistoia');
-        $('#work').find('p').text('Assistente ai Servizi Statistico Informativi · Italian Ministry of Culture. I created the first AI RAG system for an Italian state archive to consult internal documents for visitors.');
+        $('#mlsys2026 .timeline-content h3').text('MLSys 2026 · Bellevue, WA');
+        $('#mlsys2026 .timeline-content p').text('Presenting DriftBench. Artifact Evaluation Committee member. Sole undergraduate sole-author in the conference\'s nine-year history.');
+        $('#predoctoral .timeline-content h3').text('Pre-doctoral bridge');
+        $('#predoctoral .timeline-content p').text('NeurIPS 2026 workshop proposal (co-organized with CNR-ICAR). Visiting researcher positions. Fall 2027 PhD applications — ML Systems, US programs.');
+        $('#degree .timeline-content h3').text('B.Eng. Computer Engineering');
+        $('#degree .timeline-content p').text('Università Telematica Universitas Mercatorum · GPA 3.87/4.00 · Expected February 2027.');
+        $('#work .timeline-content h3').text('Archivio di Stato di Pistoia');
+        $('#work .timeline-content p').text('Assistente ai Servizi Statistico Informativi · Italian Ministry of Culture. I created the first AI RAG system for an Italian state archive to consult internal documents for visitors.');
 
         $('#contact').find('h2').text('Contact');
         $('#madeby').text('Made by Gianluigi Vitale © ');

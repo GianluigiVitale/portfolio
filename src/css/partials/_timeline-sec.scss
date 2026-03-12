@@ -1,0 +1,57 @@
+.timeline-section {
+    padding: 50px 0;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    @include color-fontSize-fontWeight($third-color, 24px, 500);
+    padding-bottom: 50px;
+}
+
+.timeline-section h2:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 4px solid #747fe0;
+    width: 50px;
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 30px;
+    padding: 25px 0;
+    border-bottom: 1px solid #e0e0e0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.timeline-year {
+    font-size: 14px;
+    color: #747fe0;
+    font-weight: 500;
+    padding-top: 2px;
+}
+
+.timeline-content {
+    h3 {
+        font-size: 16px;
+        font-weight: 500;
+        color: $third-color;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #666;
+    }
+}

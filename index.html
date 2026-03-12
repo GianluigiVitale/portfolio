@@ -2,19 +2,19 @@
 <html lang="en" dir="ltr" class="sr">
     <head>
         <meta charset="utf-8">
-        <title>Gianluigi's Portfolio</title>
+        <title>Gianluigi Vitale - ML Systems Researcher</title>
         <link rel="icon" href="assets/icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Gianluigi Vitale"/>
+        <meta property="og:title" content="Gianluigi Vitale - ML Systems Researcher"/>
         <meta property="og:image" content="assets/preview.jpg"/>
-        <meta property="og:description" content="I am a full-stack web developer. My passion is building simple, beautiful user experiences."/>
+        <meta property="og:description" content="ML Systems researcher. Sole-author undergraduate at MLSys 2026. Building measurement infrastructure for LLM serving systems."/>
         <meta property="og:url" content="https://gianluigivitale.github.io/portfolio"/>
         <link rel="stylesheet" href="dist/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha256-usTqAE1ywvdMtksWzdeWzD75MsfJN0h0U7y2NtZL3N0=" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
         <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-        <script src="dist/main.js" charset="utf-8"></script>
+        <script src="src/js/main.js" charset="utf-8"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGS3KLD4RW"></script>
     <script>
@@ -34,8 +34,8 @@
                         <img id="en" src="assets/en.png" alt="en">
                     </div>
                     <ul>
-                        <li><a href="#skills" id="goSkills">Skills</a></li>
-                        <li><a href="#projects" id="goProjects">Projects</a></li>
+                        <li><a href="#research" id="goResearch">Research</a></li>
+                        <li><a href="#timeline" id="goTimeline">Timeline</a></li>
                         <li><a href="#contact" id="goContacts">Contact</a></li>
                     </ul>
                 </nav>
@@ -48,7 +48,7 @@
                     <span class="input" id="name-input">&nbsp;&nbsp;</span>
                 </div>
                 <div class="description">
-                    <p id="description">All-around IT lover. I enjoy learning new things and taking on new challenges. <br> Check out my <a href="#projects" id="goToProjects">side-projects</a> below.</p>
+                    <p id="description">ML Systems researcher. <strong>Sole-author undergraduate</strong> at MLSys 2026 — the first in the conference's nine-year history. Building measurement infrastructure for LLM serving systems. Targeting a Fall 2027 PhD in ML Systems.</p>
                 </div>
                 <div class="about">
                     <div class="terminal">
@@ -69,18 +69,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="skills" id="skills">
-                    <h2>Skills</h2>
-                    <div class="skills-icon">     <!--   Here go the skills thanks to handlebars    -->
+                <div class="research" id="research">
+                    <h2>Research Interests</h2>
+                    <div class="research-areas">     <!--   Here go the research areas thanks to handlebars    -->
+
+                    </div>
+                    <div class="tags">     <!--   Here go the tags thanks to handlebars    -->
 
                     </div>
                 </div>
             </div>
         </section>
-        <section class="projects" id="projects">
+        <section class="paper" id="paper">
             <div class="container">
-                <h2 id="title-project">Projects</h2>
-                <div class="project-container">     <!--   Here go the projects thanks to handlebars    -->
+                <h2 id="title-paper">Featured Publication</h2>
+                <div class="paper-container">     <!--   Here go the paper details thanks to handlebars    -->
+
+                </div>
+            </div>
+        </section>
+        <section class="timeline-section" id="timeline">
+            <div class="container">
+                <h2 id="title-timeline">Timeline</h2>
+                <div class="timeline-container">     <!--   Here go the timeline items thanks to handlebars    -->
 
                 </div>
             </div>
@@ -93,10 +104,10 @@
                         <a rel="noopener" target="_blank" href="mailto:gianluigi.vitale12@gmail.com">gianluigi.vitale12@gmail.com</a>
                     </span>
                     <span>
-                        <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/gianluigi-vitale615">LinkedIn</a>
+                        <a rel="noopener" target="_blank" href="https://github.com/GianluigiVitale">GitHub</a>
                     </span>
                     <span>
-                        <a rel="noopener" target="_blank" href="https://github.com/GianluigiVitale">Github</a>
+                        <a rel="noopener" target="_blank" href="https://github.com/GianluigiVitale/driftbench-ae">DriftBench Artifact</a>
                     </span>
                 </div>
             </div>
@@ -122,38 +133,33 @@
             </div>
         </script>
 
-        <script id="skill-template" type="text/x-handlebars-template">      <!--   Handlebars template to create skills div    -->
-            <div id="{{id}}">
-                <img src="{{pathSkill}}" alt="{altSkill}">
-                <p>{{textSkill}}</p>
+        <script id="research-template" type="text/x-handlebars-template">      <!--   Handlebars template to create research areas div    -->
+            <div class="research-card" id="{{id}}">
+                <div class="card-icon">{{icon}}</div>
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
             </div>
         </script>
 
-        <script id="project-template" type="text/x-handlebars-template">  <!--   Handlebars template to create projects div    -->
-            <div class="project-card" id="{{id}}">
-                <div class="video-content">
-                    <img id="filter-top" src="assets/top-filter.png" alt="filter">
-                    <div class="video">
-                        <video src="{{video}}" autoplay loop controls muted preload="assets/videos/loading.jpg"></video>
-                    </div>
-                </div>
-                <img id="filter-bottom" src="assets/filter.png" alt="filter">
-                <div class="project-content">
+        <script id="tag-template" type="text/x-handlebars-template">      <!--   Handlebars template to create tags    -->
+            <span class="tag">{{tagName}}</span>
+        </script>
+
+        <script id="paper-template" type="text/x-handlebars-template">  <!--   Handlebars template to create paper details    -->
+            <div class="paper-card">
+                <div class="paper-label">{{{label}}}</div>
+                <h3 class="paper-title">{{{title}}}</h3>
+                <div class="paper-meta">{{{meta}}}</div>
+                <p class="paper-desc">{{{description}}}</p>
+            </div>
+        </script>
+
+        <script id="timeline-template" type="text/x-handlebars-template">  <!--   Handlebars template to create timeline items    -->
+            <div class="timeline-item" id="{{id}}">
+                <div class="timeline-year">{{year}}</div>
+                <div class="timeline-content">
                     <h3>{{title}}</h3>
-                    <p>{{{description}}}</p>
-                    <div class="project-skills">
-                        {{{skills}}}
-                    </div>
-                    <div class="project-links">
-                        <a class="live-demo" style="display: {{liveDisplay}}" target="_blank" rel="noopener noreferrer" href="{{linkLive}}">
-                            <span>Live Demo</span>
-                            <img src="assets/arrow.png" alt="arrow">
-                        </a>
-                        <a class="view-source" target="_blank" rel="noopener noreferrer" href="{{linkGitHub}}">
-                            <img src="assets/try.png" alt="github">
-                            <span>View Source</span>
-                        </a>
-                    </div>
+                    <p>{{description}}</p>
                 </div>
             </div>
         </script>

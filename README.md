@@ -1,9 +1,16 @@
-# My Portfolio
-This is my portfolio that contains the best projects I have done, the content is passed in as JSON data, auto-generating components for easy maintenance. As regards the animations I have used the javascript library ScrollRevealJS.
+# Gianluigi Vitale - ML Systems Research Portfolio
 
-The site supports mobile, tablet, and desktop sizes.
+This is my research portfolio showcasing my work as an ML Systems researcher. The content is dynamically generated using JSON data with Handlebars templates for easy maintenance. Animations are implemented using ScrollRevealJS.
 
-HTML, SCSS, JavaScript, jQuery, Handlebars, ScrollRevealJS.
+**Key Features:**
+- Research interests in LLM Serving Infrastructure and Infrastructure Drift
+- Featured publication: DriftBench (MLSys 2026)
+- Timeline of academic and professional milestones
+- Terminal-style interactive information display
+- Responsive design supporting mobile, tablet, and desktop
+
+**Technologies:** HTML, SCSS, JavaScript, jQuery, Handlebars, ScrollRevealJS.
+
 ***
 ### [https://gianluigivitale.github.io/portfolio/](https://gianluigivitale.github.io/portfolio/)
 ***

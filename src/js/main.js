@@ -2,11 +2,17 @@ $(document).ready(function () {
     var sourceStatements = $("#statement-template").html();     // handlebars statements template
     var templateStatement = Handlebars.compile(sourceStatements);
 
-    var sourceSkills = $("#skill-template").html();     // handlebars skills template
-    var templateSkill = Handlebars.compile(sourceSkills);
+    var sourceResearch = $("#research-template").html();     // handlebars research template
+    var templateResearch = Handlebars.compile(sourceResearch);
 
-    var sourceProjects = $("#project-template").html();     // handlebars project template
-    var templateProject = Handlebars.compile(sourceProjects);
+    var sourceTag = $("#tag-template").html();     // handlebars tag template
+    var templateTag = Handlebars.compile(sourceTag);
+
+    var sourcePaper = $("#paper-template").html();     // handlebars paper template
+    var templatePaper = Handlebars.compile(sourcePaper);
+
+    var sourceTimeline = $("#timeline-template").html();     // handlebars timeline template
+    var templateTimeline = Handlebars.compile(sourceTimeline);
     // end templates
 
     // animations when opening the page
@@ -25,28 +31,27 @@ $(document).ready(function () {
     handelbarsStatements();
     animationsStatements();
 
-    // delay handlebars skills and projects
+    // delay handlebars research areas, paper, and timeline
     setTimeout(function() {
-        handelbarsSkills();
-        animationsSkills();
+        handelbarsResearch();
+        handelbarsTags();
+        animationsResearch();
     }, 3500);
 
     setTimeout(function() {
-        handelbarsProjects()
-        animationsProjects();
+        handelbarsPaper();
+        handelbarsTimeline();
+        animationsPaper();
+        animationsTimeline();
     }, 3500);
 
 
     // when an 'A' tag is clicked
-    $("#goSkills").click(function() {
+    $("#goResearch").click(function() {
         slowScroll($(this));
     });
 
-    $("#goProjects").click(function() {
-        slowScroll($(this));
-    });
-
-    $("#goToProjects").click(function() {
+    $("#goTimeline").click(function() {
         slowScroll($(this));
     });
 
@@ -62,7 +67,9 @@ $(document).ready(function () {
     $("#en").click(function() {
         traduzioneInglese();
         handelbarsStatements();
-        handelbarsProjects();
+        handelbarsResearch();
+        handelbarsPaper();
+        handelbarsTimeline();
     });
 
 
@@ -97,32 +104,37 @@ $(document).ready(function () {
             {
                 "id" : "location",
                 "input" : "> Gianluigi.currentLocation",
-                "response" : "Palermo, IT",
+                "response" : "Pistoia, Italy",
             },
             {
-                "id" : "des-location",
-                "input" : "> Gianluigi.willingToRelocate",
-                "response" : "Yes",
+                "id" : "affiliation",
+                "input" : "> Gianluigi.affiliation",
+                "response" : "Universitas Mercatorum",
             },
             {
                 "id" : "info",
                 "input" : "> Gianluigi.contactInfo",
-                "response" : "[\"<a href=\"mailto:gianluigi.vitale12@gmail.com\">gianluigi.vitale12@gmail.com</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/gianluigi-vitale615\">LinkedIn</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/GianluigiVitale\">GitHub</a>\"]",
+                "response" : "[\"<a href=\"mailto:gianluigi.vitale12@gmail.com\">gianluigi.vitale12@gmail.com</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/GianluigiVitale\">GitHub</a>\"]",
             },
             {
-                "id" : "resume",
-                "input" : "> Gianluigi.resume",
-                "response" : "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/CV_Gianluigi_Vitale.pdf\">cv-EN.pdf</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"assets/CV_Gianluigi_Vitale_it.pdf\">cv-IT.pdf</a>\"]",
+                "id" : "research",
+                "input" : "> Gianluigi.researchFocus",
+                "response" : "ML Systems, LLM Serving Infrastructure, Infrastructure Drift",
             },
             {
-                "id" : "interests",
-                "input" : "> Gianluigi.interests",
-                "response" : "[\"Coding\", \"Nature\", \"Bowling\", \"Go Kart\", \"Animals\"]",
+                "id" : "publication",
+                "input" : "> Gianluigi.featuredPublication",
+                "response" : "\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/GianluigiVitale/driftbench-ae\">DriftBench: MLSys 2026</a>\"",
             },
             {
                 "id" : "education",
                 "input" : "> Gianluigi.education",
-                "response" : "[\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.boolean.careers/\">Boolean Careers</a>\", \"Liceo Scientifico S.Cannizzaro\"]",
+                "response" : "B.Eng. Computer Engineering · GPA 3.87/4.00 (Expected Feb 2027)",
+            },
+            {
+                "id" : "work",
+                "input" : "> Gianluigi.currentWork",
+                "response" : "Archivio di Stato di Pistoia (Italian Ministry of Culture)",
             }
         ];
 
@@ -144,89 +156,172 @@ $(document).ready(function () {
     function animationsStatements() {           // display animation for the statements div
         ScrollReveal().reveal('.terminal', { delay: 3000 });
         ScrollReveal().reveal('#location', { delay: 200 });
-        ScrollReveal().reveal('#des-location', { delay: 100 });
+        ScrollReveal().reveal('#affiliation', { delay: 100 });
         ScrollReveal().reveal('#info', { delay: 100 });
-        ScrollReveal().reveal('#resume', { delay: 100 });
-        ScrollReveal().reveal('#interests', { delay: 100 });
+        ScrollReveal().reveal('#research', { delay: 100 });
+        ScrollReveal().reveal('#publication', { delay: 100 });
         ScrollReveal().reveal('#education', { delay: 100 });
+        ScrollReveal().reveal('#work', { delay: 100 });
         ScrollReveal().reveal('#statement-terminal', { delay: 100 });
     }
 
 
-    function handelbarsSkills() {             // populates the skills html thanks to handlebars
-        // array of skills
-        var dataSkills = [
+    function handelbarsResearch() {             // populates the research areas html thanks to handlebars
+        $('.research-areas').empty();
+        // array of research interests
+        var dataResearch = [
             {
-                "id" : "html",
-                "pathSkill" : "assets/skills/html.png",
-                "altSkill" : "html/css",
-                "textSkill" : "HTML5, CSS3, SCSS"
+                "id" : "llm-serving",
+                "icon" : "⚡",
+                "title" : "LLM Serving Infrastructure",
+                "description" : "Performance characterization, inference system benchmarking, and serving stack measurement across hardware generations."
             },
             {
-                "id" : "js-jquery",
-                "pathSkill" : "assets/skills/js-jquery.png",
-                "altSkill" : "js/jquery",
-                "textSkill" : "JavaScript, jQuery"
+                "id" : "infrastructure-drift",
+                "icon" : "📐",
+                "title" : "Infrastructure Drift",
+                "description" : "Quantifying behavioral changes in ML systems when hardware or software environments shift — safety, correctness, and reproducibility implications."
             },
             {
-                "id" : "vuejs",
-                "pathSkill" : "assets/skills/vuejs.png",
-                "altSkill" : "vuejs",
-                "textSkill" : "VueJS,Angular"
+                "id" : "ml-benchmarking",
+                "icon" : "🔬",
+                "title" : "ML Systems Benchmarking",
+                "description" : "Rigorous evaluation frameworks and datasets for reproducible measurement of production LLM serving systems."
             },
             {
-                "id" : "ionic",
-                "pathSkill" : "assets/skills/ionic.png",
-                "altSkill" : "Ionic",
-                "textSkill" : "Ionic"
-            },
-            {
-                "id" : "php-laravel",
-                "pathSkill" : "assets/skills/php-laravel.png",
-                "altSkill" : "php-laravel",
-                "textSkill" : "PHP, Laravel"
-            },
-            {
-                "id" : "mysql",
-                "pathSkill" : "assets/skills/mysql.png",
-                "altSkill" : "mysql",
-                "textSkill" : "MySQL, SQL"
+                "id" : "safety-reliability",
+                "icon" : "🛡️",
+                "title" : "Safety & Reliability",
+                "description" : "How infrastructure changes affect safety classifier outputs and model behavior — bridging systems and alignment concerns."
             },
         ];
 
         // handlebars template with data
-        for (var key in dataSkills) {
-            var skill = dataSkills[key];
+        for (var key in dataResearch) {
+            var research = dataResearch[key];
 
-            var dataSkill = {
-                "id" : skill.id,
-                "pathSkill" : skill.pathSkill,
-                "altSkill" : skill.altSkill,
-                "textSkill" : skill.textSkill
+            var dataResearchArea = {
+                "id" : research.id,
+                "icon" : research.icon,
+                "title" : research.title,
+                "description" : research.description
             };
 
-            var htmlSkill = templateSkill(dataSkill);
-            $('.skills-icon').append(htmlSkill);
+            var htmlResearch = templateResearch(dataResearchArea);
+            $('.research-areas').append(htmlResearch);
         }
     }
 
-    function animationsSkills() {               // display animations for the skills div
-        ScrollReveal().reveal('#title-project', { delay: 300 });
-        ScrollReveal().reveal('.skills', { delay: 300 });
-        ScrollReveal().reveal('.skills-icon', { delay: 300 });
-        ScrollReveal().reveal('#html', { delay: 400 });
-        ScrollReveal().reveal('#js-jquery', { delay: 500 });
-        ScrollReveal().reveal('#vuejs', { delay: 600 });
-        ScrollReveal().reveal('#ionic', { delay: 700 });
-        ScrollReveal().reveal('#php-laravel', { delay: 800 });
-        ScrollReveal().reveal('#mysql', { delay: 900 });
+    function handelbarsTags() {             // populates the tags html thanks to handlebars
+        $('.tags').empty();
+        // array of tags
+        var dataTags = [
+            "llm-serving", "vllm", "llamaguard", "gpu-benchmarking", 
+            "h100 · b200", "infrastructure-drift", "ml-reproducibility", 
+            "pytorch", "docker"
+        ];
+
+        // handlebars template with data
+        for (var i = 0; i < dataTags.length; i++) {
+            var dataTag = {
+                "tagName" : dataTags[i]
+            };
+
+            var htmlTag = templateTag(dataTag);
+            $('.tags').append(htmlTag);
+        }
+    }
+
+    function animationsResearch() {               // display animations for the research div
+        ScrollReveal().reveal('.research', { delay: 300 });
+        ScrollReveal().reveal('.research-areas', { delay: 300 });
+        ScrollReveal().reveal('#llm-serving', { delay: 400 });
+        ScrollReveal().reveal('#infrastructure-drift', { delay: 500 });
+        ScrollReveal().reveal('#ml-benchmarking', { delay: 600 });
+        ScrollReveal().reveal('#safety-reliability', { delay: 700 });
+        ScrollReveal().reveal('.tags', { delay: 800 });
     }
 
 
-    function handelbarsProjects() {           // populates the projects html thanks to handlebars
+    function handelbarsPaper() {           // populates the paper html thanks to handlebars
+        $('.paper-container').empty();
+
+        // paper data
+        var dataPaper = {
+            "label" : "★ &nbsp;MLSys 2026 &nbsp;·&nbsp; Sole Author",
+            "title" : "DriftBench: Measuring and Predicting<br>Infrastructure Drift in LLM Serving Systems",
+            "meta" : "<span>Universitas Mercatorum</span><span class='highlight'>236,985 prompt-response pairs</span><span>MIT License · CC BY 4.0</span>",
+            "description" : "A measurement framework and predictive model (PRI) for infrastructure drift in LLM serving systems. Demonstrates a 23.85% safety flip rate on H100→B200 migration. Three self-contained evaluation paths: GPU production case study, CPU-only PRI retraining, and automated numerical verification of all 34 claims."
+        };
+
+        var htmlPaper = templatePaper(dataPaper);
+        $('.paper-container').append(htmlPaper);
+    }
+
+    function animationsPaper() {              // display animations for the paper div
+        ScrollReveal().reveal('#title-paper', { delay: 300 });
+        ScrollReveal().reveal('.paper-card', { delay: 400 });
+    }
+
+    function handelbarsTimeline() {           // populates the timeline html thanks to handlebars
+        $('.timeline-container').empty();
+
+        // array of timeline items
+        var dataTimeline = [
+            {
+                "id" : "mlsys2026",
+                "year" : "May 2026",
+                "title" : "MLSys 2026 · Bellevue, WA",
+                "description" : "Presenting DriftBench. Artifact Evaluation Committee member. Sole undergraduate sole-author in the conference's nine-year history."
+            },
+            {
+                "id" : "predoctoral",
+                "year" : "2026–2027",
+                "title" : "Pre-doctoral bridge",
+                "description" : "NeurIPS 2026 workshop proposal (co-organized with CNR-ICAR). Visiting researcher positions. Fall 2027 PhD applications — ML Systems, US programs."
+            },
+            {
+                "id" : "degree",
+                "year" : "2024–2027",
+                "title" : "B.Eng. Computer Engineering",
+                "description" : "Università Telematica Universitas Mercatorum · Expected February 2027."
+            },
+            {
+                "id" : "work",
+                "year" : "2024–now",
+                "title" : "Archivio di Stato di Pistoia",
+                "description" : "Assistente ai Servizi Statistico Informativi · Italian Ministry of Culture. I created the first AI RAG system for an Italian state archive to consult internal documents for visitors."
+            },
+        ];
+
+        // handlebars template with data
+        for (var i = 0; i < dataTimeline.length; i++) {
+            var timeline = dataTimeline[i];
+
+            var dataTimelineItem = {
+                "id" : timeline.id,
+                "year" : timeline.year,
+                "title" : timeline.title,
+                "description" : timeline.description
+            };
+
+            var htmlTimeline = templateTimeline(dataTimelineItem);
+            $('.timeline-container').append(htmlTimeline);
+        }
+    }
+
+    function animationsTimeline() {              // display animations for the timeline div
+        ScrollReveal().reveal('#title-timeline', { delay: 300 });
+        ScrollReveal().reveal('#mlsys2026', { delay: 400 });
+        ScrollReveal().reveal('#predoctoral', { delay: 500 });
+        ScrollReveal().reveal('#degree', { delay: 600 });
+        ScrollReveal().reveal('#work', { delay: 700 });
+    }
+
+    function handelbarsProjects_OLD() {           // OLD FUNCTION - kept for reference
         $('.project-container').empty();
 
-        // array of projects
+        // array of OLD projects
         var dataProjects = [
             {
                 "id" : "vaccinum",
@@ -361,7 +456,7 @@ $(document).ready(function () {
         }
     }
 
-    function animationsProjects() {              // display animations for the projects div
+    function animationsProjects_OLD() {              // OLD FUNCTION - display animations for the projects div
         ScrollReveal().reveal('#vaccinum', { delay: 300 });
         ScrollReveal().reveal('#boolbnb', { delay: 300 });
         ScrollReveal().reveal('#boolzap', { delay: 300 });
@@ -382,53 +477,70 @@ $(document).ready(function () {
     }
 
     function traduzioneItaliano() {             // translates the website in italian
-        $('#goSkills').text('Competenze');
-        $('#goProjects').text('Progetti');
+        $('#goResearch').text('Ricerca');
+        $('#goTimeline').text('Cronologia');
         $('#goContacts').text('Contatti');
-        $('#description').html('Sono uno sviluppatore web full-stack. La mia passione è realizzare semplici e belle esperienze per gli utenti. <br> Dai un occhiata ai miei <a href="#projects" id="goToProjects">progetti</a> qui sotto.');
-        $('#location').find('.statement-input p').text('> Gianluigi.cittàAttuale');
-        $('#des-location').find('.statement-input p').text('> Gianluigi.disponibilitàAlTrasferimento');
-        $('#des-location').find('.statement-response p').text('Si');
+        $('#description').html('Ricercatore in ML Systems. <strong>Primo studente undergraduate come unico autore</strong> alla MLSys 2026 — il primo nella storia di nove anni della conferenza. Sviluppo infrastrutture di misurazione per sistemi di serving LLM. Candidatura per PhD autunno 2027 in ML Systems.');
+        $('#location').find('.statement-input p').text('> Gianluigi.posizioneAttuale');
+        $('#affiliation').find('.statement-input p').text('> Gianluigi.affiliazione');
         $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
-        $('#resume').find('.statement-input p').text('> Gianluigi.curriculum');
-        $('#interests').find('.statement-input p').text('> Gianluigi.interessi');
-        $('#interests').find('.statement-response p').text('["Informatica", "Natura", "Bowling", "Go Kart", "Animali"]');
+        $('#research').find('.statement-input p').text('> Gianluigi.focusRicerca');
+        $('#research').find('.statement-response p').text('ML Systems, Infrastruttura LLM Serving, Infrastructure Drift');
+        $('#publication').find('.statement-input p').text('> Gianluigi.pubblicazionePrincipale');
         $('#education').find('.statement-input p').text('> Gianluigi.formazione');
+        $('#education').find('.statement-response p').text('Laurea in Ingegneria Informatica (Prevista Feb 2027)');
+        $('#work').find('.statement-input p').text('> Gianluigi.lavoroAttuale');
+        $('#work').find('.statement-response p').text('Archivio di Stato di Pistoia (Ministero della Cultura)');
 
-        $('#skills').find('h2').text('Competenze');
+        $('#research').find('h2').text('Interessi di Ricerca');
+        $('#title-paper').text('Pubblicazione in Evidenza');
+        $('#title-timeline').text('Cronologia');
 
-        $('.view-source').find('span').text('Visualizza Codice');
-        $('.live-demo').find('span').text('Visualizza Demo');
-
-        $('#projects').find('h2').text('Progetti');
-
-        $('#vaccinum').find('.project-content p').text('L\'app mostra i principali dati delle vaccinazioni covid-19 mondali e nazionali in un modo semplice, veloce ed intuitivo. Nell\'app sono visualizzati i dati mondiali e quelli relativi alla nazione selezionata dall\'utente e ogni domenica manda una notifica con i dati dei vaccinati della nazione selezionata della settimana e totali, ed è disponibile in 15 lingue. Link download: https://appvaccinum.com');
-        $('#boolbnb').find('.project-content p').text('BoolBnB è un\'applicazione per trovare e gestire l’affitto di appartamenti. Gli utenti che vogliono mettere in affitto un appartamento una volta registrati possono creare un annuncio. Gli utenti interessati ad un appartamento, utilizzando i filtri di una apposita pagina di ricerca, vedono una lista di possibili appartamenti e cliccando su ognuno possono vedere una pagina di dettaglio. L’utente può contattare il proprietario per fare domande. Inoltre, i proprietari di un appartamento possono pagare per sponsorizzare l’annuncio del proprio appartamento e renderlo maggiormente in evidenza.');
-        $('#boolzap').find('.project-content p').text('Progetto ispirato a WhatsApp Web. È possibile inviare messaggi a diversi contatti che dopo un secondo risponderanno con un buffo messaggio casuale. Il sito è compatibile con i formati cellulari, tablet e desktop.');
-        $('#teambit').find('.project-content p').text('Replica completa della landing page di teambit.io. Ogni elemento è stato replicato dall\'hamburger menu alla finestra della live chat. Il sito è compatibile con i formati cellulari, tablet e desktop.');
-        $('#boolflix').find('.project-content p').text('Boolflix permette di ottenere informazioni su film/serie tv. Per esempio, cercando \'Star Wars\' si ottengono tutti i film/serie tv che includono \'Star Wars\' nel titolo. Il sito è compatibile con i formati cellulari, tablet e desktop.');
-        $('#challenges').find('.project-content h3').text('100+ Esercizi Svolti di PHP');
-        $('#challenges').find('.project-content p').text('Questa repository contiene le mie soluzioni a diversi esercizi che ho svolto di PHP presi dal sito codewars.com. Considerando anche JavaScript ho svolto 166 esercizi, classificandomi al 94° percentile.');
-        $('#calendar').find('.project-content h3').text('Calendario delle festività');
-        $('#calendar').find('.project-content p').text('Calendario delle festività del 2018. I giorni del mese sono generati grazie a MomentJS e Handlebars e grazie a una richiesta ajax vengono aggiunti i giorni festivi. Il sito è compatibile con i formati cellulari, tablet e desktop.');
-        $('#dashboard').find('.project-content p').text('Dashboard dei Key Performance Indicator di una società. I dati sono presi da una API mentre i grafici sono realizzati con ChartJS. È possibile aggiungere una vendita selezionando il venditore, il mese e l\'importo.');
-        $('#albums').find('.project-content p').text('Sito web per mostrare le informazioni di diversi album presi da un API. È possibile filtrare le canzoni per genere. Il sito è compatibile con i formati cellulari, tablet e desktop.');
-        $('#minefield').find('.project-content p').text('Il computer genera 16 numeri casuali tra 1 e 100. In seguito chiede all’utente di inserire un numero alla volta, sempre compreso tra 1 e 100. Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero. La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti. Al termine della partita il software comunica il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito. L\'utente può anche selezionare la difficoltà che determina la dimensione del campo (il numero massimo).');
-        $('#digital').find('.project-content p').text('Replica della landing page di Digital Ocean sviluppata con Bootstrap. Il sito è compatibile con i formati cellulari, tablet e desktop.');
+        // Update research area titles
+        $('#llm-serving').find('h3').text('Infrastruttura LLM Serving');
+        $('#llm-serving').find('p').text('Caratterizzazione delle prestazioni, benchmarking dei sistemi di inferenza e misurazione dello stack di serving tra diverse generazioni hardware.');
+        $('#infrastructure-drift').find('h3').text('Infrastructure Drift');
+        $('#infrastructure-drift').find('p').text('Quantificazione dei cambiamenti comportamentali nei sistemi ML quando gli ambienti hardware o software cambiano — implicazioni per sicurezza, correttezza e riproducibilità.');
+        $('#ml-benchmarking').find('h3').text('Benchmarking Sistemi ML');
+        $('#ml-benchmarking').find('p').text('Framework di valutazione rigorosi e dataset per misurazioni riproducibili dei sistemi di serving LLM in produzione.');
+        $('#safety-reliability').find('h3').text('Sicurezza e Affidabilità');
+        $('#safety-reliability').find('p').text('Come i cambiamenti infrastrutturali influenzano gli output dei classificatori di sicurezza e il comportamento del modello — collegando sistemi e problemi di allineamento.');
 
         $('#contact').find('h2').text('Contatti');
-        $('#madeby').text('Creato da Gianluigi Vitale © ');
+        $('#madeby').text('Creato da Gianluigi Vitale ');
     }
 
     function traduzioneInglese() {              // translates the website in english
-        $('#goSkills').text('Skills');
-        $('#goProjects').text('Projects');
+        $('#goResearch').text('Research');
+        $('#goTimeline').text('Timeline');
         $('#goContacts').text('Contact');
 
-        $('#description').html('I am a full-stack web developer. My passion is building simple, beautiful user experiences. <br> Check out my <a href="#projects" id="goToProjects">side-projects</a> below.');
+        $('#description').html('ML Systems researcher. <strong>Sole-author undergraduate</strong> at MLSys 2026 — the first in the conference\'s nine-year history. Building measurement infrastructure for LLM serving systems. Targeting a Fall 2027 PhD in ML Systems.');
 
-        $('#skills').find('h2').text('Skills');
-        $('#projects').find('h2').text('Projects');
+        $('#location').find('.statement-input p').text('> Gianluigi.currentLocation');
+        $('#affiliation').find('.statement-input p').text('> Gianluigi.affiliation');
+        $('#info').find('.statement-input p').text('> Gianluigi.contactInfo');
+        $('#research').find('.statement-input p').text('> Gianluigi.researchFocus');
+        $('#research').find('.statement-response p').text('ML Systems, LLM Serving Infrastructure, Infrastructure Drift');
+        $('#publication').find('.statement-input p').text('> Gianluigi.featuredPublication');
+        $('#education').find('.statement-input p').text('> Gianluigi.education');
+        $('#education').find('.statement-response p').text('B.Eng. Computer Engineering (Expected Feb 2027)');
+        $('#work').find('.statement-input p').text('> Gianluigi.currentWork');
+        $('#work').find('.statement-response p').text('Archivio di Stato di Pistoia (Italian Ministry of Culture)');
+
+        $('#research').find('h2').text('Research Interests');
+        $('#title-paper').text('Featured Publication');
+        $('#title-timeline').text('Timeline');
+
+        // Update research area titles
+        $('#llm-serving').find('h3').text('LLM Serving Infrastructure');
+        $('#llm-serving').find('p').text('Performance characterization, inference system benchmarking, and serving stack measurement across hardware generations.');
+        $('#infrastructure-drift').find('h3').text('Infrastructure Drift');
+        $('#infrastructure-drift').find('p').text('Quantifying behavioral changes in ML systems when hardware or software environments shift — safety, correctness, and reproducibility implications.');
+        $('#ml-benchmarking').find('h3').text('ML Systems Benchmarking');
+        $('#ml-benchmarking').find('p').text('Rigorous evaluation frameworks and datasets for reproducible measurement of production LLM serving systems.');
+        $('#safety-reliability').find('h3').text('Safety & Reliability');
+        $('#safety-reliability').find('p').text('How infrastructure changes affect safety classifier outputs and model behavior — bridging systems and alignment concerns.');
 
         $('#contact').find('h2').text('Contact');
         $('#madeby').text('Made by Gianluigi Vitale © ');

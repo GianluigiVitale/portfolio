@@ -114,7 +114,7 @@ $(document).ready(function () {
             {
                 "id" : "info",
                 "input" : "> Gianluigi.contactInfo",
-                "response" : "[\"<a href=\"mailto:gianluigi.vitale12@gmail.com\">gianluigi.vitale12@gmail.com</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/GianluigiVitale\">GitHub</a>\"]",
+                "response" : "[\"<a href=\"mailto:gianluigi.vitale11@gmail.com\">gianluigi.vitale11@gmail.com</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/GianluigiVitale\">GitHub</a>\", \"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.linkedin.com/in/gianluigi-vitale615\">LinkedIn</a>\"]",
             },
             {
                 "id" : "research",
@@ -127,9 +127,14 @@ $(document).ready(function () {
                 "response" : "\"<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/GianluigiVitale/driftbench-ae\">DriftBench: MLSys 2026</a>\"",
             },
             {
+                "id" : "peer-review",
+                "input" : "> Gianluigi.peerReview",
+                "response" : "MLSys 2026 Artifact Evaluation Committee · 4 papers reviewed",
+            },
+            {
                 "id" : "education",
                 "input" : "> Gianluigi.education",
-                "response" : "B.Eng. Computer Engineering · GPA 3.87/4.00 (Expected Feb 2027)",
+                "response" : "B.Eng. Computer Engineering · GPA 3.79/4.00 (Expected Feb 2027)",
             },
             {
                 "id" : "work",
@@ -160,6 +165,7 @@ $(document).ready(function () {
         ScrollReveal().reveal('#info', { delay: 100 });
         ScrollReveal().reveal('#research', { delay: 100 });
         ScrollReveal().reveal('#publication', { delay: 100 });
+        ScrollReveal().reveal('#peer-review', { delay: 100 });
         ScrollReveal().reveal('#education', { delay: 100 });
         ScrollReveal().reveal('#work', { delay: 100 });
         ScrollReveal().reveal('#statement-terminal', { delay: 100 });
@@ -248,9 +254,9 @@ $(document).ready(function () {
 
         // paper data
         var dataPaper = {
-            "label" : "★ &nbsp;MLSys 2026 &nbsp;·&nbsp; Sole Author",
+            "label" : "★ &nbsp;MLSys 2026 &nbsp;·&nbsp; Sole Author &nbsp;·&nbsp; Artifact: Available · Functional · Reproduced",
             "title" : "DriftBench: Measuring and Predicting<br>Infrastructure Drift in LLM Serving Systems",
-            "meta" : "<span>Universitas Mercatorum</span><span class='highlight'>236,985 prompt-response pairs</span><span>MIT License · CC BY 4.0</span>",
+            "meta" : "<span>Universitas Mercatorum</span><span class='highlight'>236,985 prompt-response pairs</span><span>MIT License · CC BY 4.0</span><span><a target='_blank' rel='noopener noreferrer' href='https://doi.org/10.5281/zenodo.19361066'>Zenodo DOI</a> · <a target='_blank' rel='noopener noreferrer' href='https://github.com/GianluigiVitale/driftbench-ae'>Artifact repo</a></span>",
             "description" : "A measurement framework and predictive model (PRI) for infrastructure drift in LLM serving systems. Demonstrates a 23.85% safety flip rate on H100→B200 migration. Three self-contained evaluation paths: GPU production case study, CPU-only PRI retraining, and automated numerical verification of all 34 claims."
         };
 
@@ -272,7 +278,7 @@ $(document).ready(function () {
                 "id" : "mlsys2026",
                 "year" : "May 2026",
                 "title" : "MLSys 2026 · Bellevue, WA",
-                "description" : "Presenting DriftBench. Artifact Evaluation Committee member. Sole undergraduate sole-author in the conference's nine-year history."
+                "description" : "Presenting DriftBench (sole author). MLSys 2026 Artifact Evaluation Committee: reviewed Hawkeye, HipKittens, DisAgg, and ParallelKittens."
             },
             {
                 "id" : "predoctoral",
@@ -480,13 +486,15 @@ $(document).ready(function () {
         $('#goResearch').text('Ricerca');
         $('#goTimeline').text('Esperienze');
         $('#goContacts').text('Contatti');
-        $('#description').html('Ricercatore in ML Systems. <strong>Primo studente universitario unico autore</strong> alla MLSys 2026 — il primo nella storia di nove anni della conferenza. Sviluppo infrastrutture di misurazione per sistemi di serving LLM. Candidatura per PhD autunno 2027 in ML Systems.');
+        $('#description').html('Ricercatore in ML Systems. <strong>Unico autore di DriftBench</strong> (MLSys 2026). Sviluppo infrastrutture di misurazione per sistemi di serving LLM. Candidatura per PhD autunno 2027 in ML Systems.');
         $('#location').find('.statement-input p').text('> Gianluigi.posizioneAttuale');
         $('#affiliation').find('.statement-input p').text('> Gianluigi.affiliazione');
         $('#info').find('.statement-input p').text('> Gianluigi.informazioniDiContatto');
         $('#research').find('.statement-input p').text('> Gianluigi.focusRicerca');
         $('#research').find('.statement-response p').text('ML Systems, Infrastruttura LLM Serving, Infrastructure Drift');
         $('#publication').find('.statement-input p').text('> Gianluigi.pubblicazionePrincipale');
+        $('#peer-review').find('.statement-input p').text('> Gianluigi.revisioni');
+        $('#peer-review').find('.statement-response p').text('Revisore per l\'Artifact Evaluation, MLSys 2026 · 4 paper revisionati');
         $('#education').find('.statement-input p').text('> Gianluigi.formazione');
         $('#education').find('.statement-response p').text('Laurea in Ingegneria Informatica · Media 29/30 (Prevista Febbraio 2027)');
         $('#work').find('.statement-input p').text('> Gianluigi.lavoroAttuale');
@@ -507,14 +515,14 @@ $(document).ready(function () {
         $('#safety-reliability').find('p').text('Come i cambiamenti infrastrutturali influenzano gli output dei classificatori di sicurezza e il comportamento del modello — collegando sistemi e problemi di allineamento.');
 
         // Update paper section
-        $('.paper-label').html('★ &nbsp;MLSys 2026 &nbsp;·&nbsp; Unico Autore');
+        $('.paper-label').html('★ &nbsp;MLSys 2026 &nbsp;·&nbsp; Unico Autore &nbsp;·&nbsp; Artefatto: Available · Functional · Reproduced');
         $('.paper-title').html('DriftBench: Misurare e Predire<br>Infrastructure Drift nei Sistemi di Serving LLM');
-        $('.paper-meta').html('<span>Universitas Mercatorum</span><span class="highlight">236.985 coppie prompt-risposta</span><span>Licenza MIT · CC BY 4.0</span>');
+        $('.paper-meta').html('<span>Universitas Mercatorum</span><span class="highlight">236.985 coppie prompt-risposta</span><span>Licenza MIT · CC BY 4.0</span><span><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.5281/zenodo.19361066">Zenodo DOI</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/GianluigiVitale/driftbench-ae">Repo artefatto</a></span>');
         $('.paper-desc').text('Un framework di misurazione e modello predittivo (PRI) per infrastructure drift nei sistemi di serving LLM. Dimostra un tasso di inversione di sicurezza del 23,85% nella migrazione H100→B200. Tre percorsi di valutazione autonomi: caso di studio GPU in produzione, riaddestramento PRI solo CPU e verifica numerica automatizzata di tutte le 34 affermazioni.');
 
         // Update timeline items
         $('#mlsys2026 .timeline-content h3').text('MLSys 2026 · Bellevue, WA');
-        $('#mlsys2026 .timeline-content p').text('Presentazione di DriftBench. Membro del Comitato di Valutazione degli Artefatti. Unico studente undergraduate come unico autore nella storia di nove anni della conferenza.');
+        $('#mlsys2026 .timeline-content p').text('Presentazione di DriftBench (unico autore). Revisore per l\'Artifact Evaluation, MLSys 2026: revisione di Hawkeye, HipKittens, DisAgg e ParallelKittens.');
         $('#predoctoral .timeline-content h3').text('Ponte pre-dottorato');
         $('#predoctoral .timeline-content p').text('Proposta di workshop NeurIPS 2026 (co-organizzato con CNR-ICAR). Posizioni di ricercatore in visita. Candidature PhD autunno 2027 — ML Systems, programmi USA.');
         $('#degree .timeline-content h3').text('Laurea in Ingegneria Informatica');
@@ -531,7 +539,7 @@ $(document).ready(function () {
         $('#goTimeline').text('Timeline');
         $('#goContacts').text('Contact');
 
-        $('#description').html('ML Systems researcher. <strong>Sole-author undergraduate</strong> at MLSys 2026 — the first in the conference\'s nine-year history. Building measurement infrastructure for LLM serving systems. Targeting a Fall 2027 PhD in ML Systems.');
+        $('#description').html('ML Systems researcher. <strong>Sole-author of DriftBench</strong> (MLSys 2026). Building measurement infrastructure for LLM serving systems. Targeting a Fall 2027 PhD in ML Systems.');
 
         $('#location').find('.statement-input p').text('> Gianluigi.currentLocation');
         $('#affiliation').find('.statement-input p').text('> Gianluigi.affiliation');
@@ -539,8 +547,10 @@ $(document).ready(function () {
         $('#research').find('.statement-input p').text('> Gianluigi.researchFocus');
         $('#research').find('.statement-response p').text('ML Systems, LLM Serving Infrastructure, Infrastructure Drift');
         $('#publication').find('.statement-input p').text('> Gianluigi.featuredPublication');
+        $('#peer-review').find('.statement-input p').text('> Gianluigi.peerReview');
+        $('#peer-review').find('.statement-response p').text('MLSys 2026 Artifact Evaluation Committee · 4 papers reviewed');
         $('#education').find('.statement-input p').text('> Gianluigi.education');
-        $('#education').find('.statement-response p').text('B.Eng. Computer Engineering · GPA 3.87/4.00 (Expected Feb 2027)');
+        $('#education').find('.statement-response p').text('B.Eng. Computer Engineering · GPA 3.79/4.00 (Expected Feb 2027)');
         $('#work').find('.statement-input p').text('> Gianluigi.currentWork');
         $('#work').find('.statement-response p').text('Archivio di Stato di Pistoia (Italian Ministry of Culture)');
 
@@ -559,18 +569,18 @@ $(document).ready(function () {
         $('#safety-reliability').find('p').text('How infrastructure changes affect safety classifier outputs and model behavior — bridging systems and alignment concerns.');
 
         // Reset paper section to English
-        $('.paper-label').html('★ &nbsp;MLSys 2026 &nbsp;·&nbsp; Sole Author');
+        $('.paper-label').html('★ &nbsp;MLSys 2026 &nbsp;·&nbsp; Sole Author &nbsp;·&nbsp; Artifact: Available · Functional · Reproduced');
         $('.paper-title').html('DriftBench: Measuring and Predicting<br>Infrastructure Drift in LLM Serving Systems');
-        $('.paper-meta').html('<span>Universitas Mercatorum</span><span class="highlight">236,985 prompt-response pairs</span><span>MIT License · CC BY 4.0</span>');
+        $('.paper-meta').html('<span>Universitas Mercatorum</span><span class="highlight">236,985 prompt-response pairs</span><span>MIT License · CC BY 4.0</span><span><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.5281/zenodo.19361066">Zenodo DOI</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/GianluigiVitale/driftbench-ae">Artifact repo</a></span>');
         $('.paper-desc').text('A measurement framework and predictive model (PRI) for infrastructure drift in LLM serving systems. Demonstrates a 23.85% safety flip rate on H100→B200 migration. Three self-contained evaluation paths: GPU production case study, CPU-only PRI retraining, and automated numerical verification of all 34 claims.');
 
         // Reset timeline items to English
         $('#mlsys2026 .timeline-content h3').text('MLSys 2026 · Bellevue, WA');
-        $('#mlsys2026 .timeline-content p').text('Presenting DriftBench. Artifact Evaluation Committee member. Sole undergraduate sole-author in the conference\'s nine-year history.');
+        $('#mlsys2026 .timeline-content p').text('Presenting DriftBench (sole author). MLSys 2026 Artifact Evaluation Committee: reviewed Hawkeye, HipKittens, DisAgg, and ParallelKittens (4 papers across 4 institutional affiliations).');
         $('#predoctoral .timeline-content h3').text('Pre-doctoral bridge');
         $('#predoctoral .timeline-content p').text('NeurIPS 2026 workshop proposal (co-organized with CNR-ICAR). Visiting researcher positions. Fall 2027 PhD applications — ML Systems, US programs.');
         $('#degree .timeline-content h3').text('B.Eng. Computer Engineering');
-        $('#degree .timeline-content p').text('Università Telematica Universitas Mercatorum · GPA 3.87/4.00 · Expected February 2027.');
+        $('#degree .timeline-content p').text('Università Telematica Universitas Mercatorum · GPA 3.79/4.00 · Expected February 2027.');
         $('#work .timeline-content h3').text('Archivio di Stato di Pistoia');
         $('#work .timeline-content p').text('Assistente ai Servizi Statistico Informativi · Italian Ministry of Culture. I created the first AI RAG system for an Italian state archive to consult internal documents for visitors.');
 

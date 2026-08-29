@@ -5,8 +5,8 @@ This is my research portfolio showcasing my work in ML systems, LLM serving infr
 **Key Features:**
 - Featured publication: DriftBench (MLSys 2026)
 - Active Google TPU Research Cloud allocation and current TPU research
-- NeurIPS 2026 submissions under review
-- Academic service across MLSys, SOSP, and NeurIPS
+- Two sole-author manuscripts under review (titles and venue details withheld until notification)
+- Academic service: MLSys 2027 Program Committee, MLSys and SOSP artifact evaluation, and NeurIPS ethics review
 - Professional experience, education, and research profiles
 - English and Italian content with responsive desktop and mobile layouts
 

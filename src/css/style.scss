@@ -254,8 +254,11 @@ footer { background: $ink; color: #8fa6aa; padding: 25px 0; }
     .language-switch { border: 0; margin: 18px 0 0; padding: 0; }
     .hero { min-height: auto; padding: 0 0 72px; }
     .hero-backdrop, .hero::after { display: none; }
-    .mobile-talk-player { aspect-ratio: 16 / 9; background: $ink; display: block; width: 100%; }
-    .mobile-talk-player iframe { border: 0; display: block; height: 100%; width: 100%; }
+    .mobile-talk-player { aspect-ratio: 1.87 / 1; background: $ink; display: block; overflow: hidden; position: relative; width: 100%; }
+    .mobile-talk-player::after { background: linear-gradient(180deg, transparent 50%, rgba(7, 26, 29, 0.72) 100%); content: ''; inset: 0; position: absolute; }
+    .mobile-talk-player img { display: block; height: 100%; object-fit: cover; width: 100%; }
+    .mobile-talk-link { align-items: center; bottom: 14px; color: $white; display: flex; font-size: 12px; font-weight: 700; gap: 9px; left: 16px; position: absolute; z-index: 1; }
+    .mobile-play-mark { align-items: center; background: $mint; border-radius: 50%; color: $ink; display: inline-flex; font-size: 8px; height: 28px; justify-content: center; padding-left: 2px; width: 28px; }
     .hero-grid { animation: none; padding-top: 56px; }
     h1 { font-size: clamp(46px, 14vw, 67px); }
     .hero-lede { font-size: 18px; }

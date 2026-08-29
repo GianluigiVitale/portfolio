@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         oralPresentation: 'Presentazione orale', soleAuthor: 'Unico autore', acmBadges: 'Badge ACM: Available · Functional · Reproduced',
         recordedTalk: 'Talk registrato',
         driftbenchDesc: 'DriftBench è un framework di misurazione e previsione composto da 236.985 coppie prompt-risposta in 105 configurazioni, 5 modelli, 4 piattaforme GPU, 3 framework e 3 precisioni. Il Portability Risk Index generalizza a hardware (R² = 0,909) e precisioni (R² = 0,763) mai visti, separando il drift sistematico hardware/precisione dai cambiamenti di framework/modello che richiedono nuove misurazioni. Nella validazione in produzione ha bloccato un aggiornamento ad alto drift in cui il 23,85% dei prompt di safety ha cambiato classificazione.',
-        activeSince: 'Attivo da maggio 2026', trcTitle: 'Cosa ho costruito su TRC',
+        activeSince: 'Attivo da maggio 2026', trcTitle: 'Ricerca realizzata con Google TPU Research Cloud',
         trcIntro: 'Bring-up di modelli, nuovi kernel, validazione tra acceleratori e caratterizzazione hardware a livello di bit su TPU v4, v5e e v6e.',
         workingBringup: 'Bring-up funzionante',
         deepseekDesc: 'Ho completato un bring-up su 32 chip v4-64, validando tutte le modalità di attenzione con prefill e decode operativi. Un supporto equivalente è stato successivamente integrato in vLLM TPU inference attraverso uno sviluppo parallelo nell’ecosistema più ampio.',

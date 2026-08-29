@@ -83,9 +83,8 @@
                 <div class="shell hero-grid">
                     <div class="hero-copy">
                         <p class="eyebrow" data-i18n="heroEyebrow">ML systems researcher · Systems engineer</p>
-                        <h1 data-i18n="heroTitle">Researching the systems beneath model behavior.</h1>
-                        <p class="hero-lede" data-i18n="heroLede">I build measurement frameworks for LLM serving reliability, benchmark accelerators and inference stacks, and study how infrastructure changes propagate into model outputs.</p>
-                        <p class="hero-proof" data-i18n="heroProof">Sole author of DriftBench at MLSys 2026 · Active Google TPU Research Cloud researcher · Invited to the MLSys 2027 Program Committee</p>
+                        <h1 data-i18n="heroTitle">I study how LLM systems fail.</h1>
+                        <p class="hero-lede" data-i18n="heroLede">I build and measure the systems beneath model behavior: serving stacks, accelerator kernels, numerical paths, and the failures that appear when infrastructure changes.</p>
                         <div class="hero-actions">
                             <a class="button button-primary" href="#work" data-i18n="viewResearch">Explore the research</a>
                             <a class="button button-secondary" href="assets/CV_Gianluigi_Vitale.pdf" target="_blank" rel="noopener" data-i18n="downloadCv">Download CV</a>
@@ -93,61 +92,80 @@
                     </div>
                     <aside class="now-panel" aria-label="Current research status">
                         <div class="panel-label"><span class="status-dot"></span><span data-i18n="currentLabel">Current</span></div>
-                        <div class="now-item"><span class="now-key" data-i18n="nowComputeKey">Compute</span><strong data-i18n="nowComputeValue">320-chip Google TRC allocation</strong></div>
+                        <div class="now-item"><span class="now-key" data-i18n="nowPublicationKey">Publication</span><strong data-i18n="nowPublicationValue">DriftBench · MLSys 2026 · sole author</strong></div>
                         <div class="now-item"><span class="now-key" data-i18n="nowReviewKey">Under review</span><strong data-i18n="nowReviewValue">2 first-author NeurIPS 2026 submissions</strong></div>
-                        <div class="now-item"><span class="now-key" data-i18n="nowServiceKey">Service</span><strong data-i18n="nowServiceValue">MLSys 2027 PC invitation</strong></div>
-                        <div class="now-item"><span class="now-key" data-i18n="nowBaseKey">Based in</span><strong>Pistoia, Italy</strong></div>
+                        <div class="now-item"><span class="now-key" data-i18n="nowServiceKey">Service</span><strong data-i18n="nowServiceValue">NeurIPS Ethics Reviewer · MLSys & SOSP Artifact Evaluation</strong></div>
                     </aside>
-                </div>
-                <div class="shell evidence-strip" aria-label="Research highlights">
-                    <div><strong>237K</strong><span data-i18n="metricEvaluations">DriftBench evaluations</span></div>
-                    <div><strong>R² .909</strong><span data-i18n="metricPrediction">hardware-drift prediction</span></div>
-                    <div><strong>320</strong><span data-i18n="metricTpu">TPU chips allocated</span></div>
-                    <div><strong>4</strong><span data-i18n="metricArtifacts">MLSys artifacts evaluated</span></div>
                 </div>
             </section>
 
             <section class="section section-light" id="work">
                 <div class="shell">
-                    <div class="section-heading">
-                        <p class="section-index">01 / <span data-i18n="workIndex">Selected work</span></p>
-                        <h2 data-i18n="workTitle">Measure the stack. Explain the change.</h2>
-                        <p data-i18n="workIntro">My work connects infrastructure-level changes to observable differences in model behavior, with an emphasis on reproducible evidence.</p>
-                    </div>
                     <article class="featured-work">
-                        <div class="feature-main">
-                            <div class="work-label"><span>MLSys 2026</span><span data-i18n="oralPresentation">Oral presentation</span><span data-i18n="soleAuthor">Sole author</span></div>
-                            <h3>DriftBench: Measuring and Predicting Infrastructure Drift in LLM Serving Systems</h3>
-                            <p data-i18n="driftbenchDesc">A benchmark and predictive model for measuring how GPU architecture, numerical precision, and inference-framework changes silently alter LLM outputs. Across 237,000 evaluations, hardware-induced drift proved highly predictable while framework-induced drift generally required direct re-measurement.</p>
-                            <div class="inline-links">
-                                <a href="https://doi.org/10.5281/zenodo.19361066" target="_blank" rel="noopener">Paper / DOI <span aria-hidden="true">↗</span></a>
-                                <a href="https://github.com/GianluigiVitale/driftbench-ae" target="_blank" rel="noopener">Artifact <span aria-hidden="true">↗</span></a>
+                        <a class="talk-poster" href="https://www.youtube.com/watch?v=KnsVj5DdIEo" target="_blank" rel="noopener" aria-label="Watch Gianluigi Vitale present DriftBench at MLSys 2026 on YouTube">
+                            <img src="assets/driftbench-mlsys-talk.png" alt="Gianluigi Vitale presenting DriftBench at MLSys 2026 in Bellevue">
+                            <span class="poster-link"><span class="play-mark" aria-hidden="true">▶</span><span data-i18n="watchTalk">Watch the MLSys 2026 talk</span></span>
+                        </a>
+                        <div class="feature-body">
+                            <div class="feature-main">
+                                <div class="work-label"><span>MLSys 2026</span><span data-i18n="oralPresentation">Oral presentation</span><span data-i18n="soleAuthor">Sole author</span></div>
+                                <h3>DriftBench: Measuring and Predicting Infrastructure Drift in LLM Serving Systems</h3>
+                                <p data-i18n="driftbenchDesc">DriftBench is a measurement and prediction framework comprising 236,985 prompt-response pairs across 105 configurations, 5 models, 4 GPU platforms, 3 frameworks, and 3 precisions. Its Portability Risk Index generalizes to unseen hardware (R² = 0.909) and precision (R² = 0.763), separating systematic hardware/precision drift from framework/model changes that require re-measurement. In production validation, it blocked a high-drift upgrade where 23.85% of safety prompts flipped classification.</p>
+                                <div class="inline-links">
+                                    <a href="https://proceedings.mlsys.org/paper_files/paper/2026/hash/ea0b5818ae9255ee1fb1e3b4442d2ffe-Abstract-Conference.html" target="_blank" rel="noopener">MLSys proceedings <span aria-hidden="true">↗</span></a>
+                                    <a href="https://doi.org/10.5281/zenodo.19361066" target="_blank" rel="noopener">Artifacts & dataset <span aria-hidden="true">↗</span></a>
+                                    <a href="https://www.youtube.com/watch?v=KnsVj5DdIEo" target="_blank" rel="noopener"><span data-i18n="recordedTalk">Recorded talk</span> <span aria-hidden="true">↗</span></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="feature-aside">
-                            <p class="mono-label" data-i18n="resultLabel">Key result</p>
-                            <strong>23.85%</strong>
-                            <p data-i18n="resultText">safety flip rate measured in an H100 → B200 migration</p>
-                            <div class="artifact-badges" aria-label="Artifact badges"><span>Available</span><span>Functional</span><span>Reproduced</span></div>
+                            <div class="feature-aside">
+                                <p class="mono-label" data-i18n="resultLabel">Production result</p>
+                                <strong>23.85%</strong>
+                                <p data-i18n="resultText">of safety prompts flipped classification during a high-drift infrastructure upgrade</p>
+                                <div class="artifact-badges" aria-label="Artifact badges"><span>Available</span><span>Functional</span><span>Reproduced</span></div>
+                            </div>
                         </div>
                     </article>
-                    <div class="work-grid">
-                        <article class="work-card trc-card">
-                            <div class="card-kicker"><span>Google Cloud</span><span data-i18n="activeSince">Active since May 2026</span></div>
-                            <h3 data-i18n="trcTitle">TPU Research Cloud allocation</h3>
-                            <p data-i18n="trcIntro">A 320-chip allocation supporting independent research on accelerator portability and LLM systems performance across US and EU zones.</p>
-                            <div class="allocation-grid">
-                                <div><strong>32</strong><span data-i18n="onDemand">on-demand v4 chips</span></div>
-                                <div><strong>288</strong><span data-i18n="spotChips">spot v4, v5e, and v6e chips</span></div>
-                            </div>
-                            <div class="progress-list">
-                                <div><span class="progress-tag complete" data-i18n="completed">Completed</span><p data-i18n="trcCompleted">Ported GLM model workloads to Cloud TPUs, resolved model/runtime compatibility issues, and validated correct execution.</p></div>
-                                <div><span class="progress-tag active" data-i18n="inProgress">In progress</span><p data-i18n="trcProgress">Extending the work into a broader study of accelerator portability and LLM systems performance across TPU generations.</p></div>
-                            </div>
-                        </article>
-                        <article class="work-card review-card">
-                            <div class="card-kicker"><span>NeurIPS 2026</span><span data-i18n="twoFirstAuthor">2 first-author submissions</span></div>
-                            <h3 data-i18n="underReviewTitle">Currently under review</h3>
+
+                    <article class="trc-showcase">
+                        <header class="trc-header">
+                            <div class="card-kicker"><span>Google TPU Research Cloud</span><span data-i18n="activeSince">Active since May 2026</span></div>
+                            <h3 data-i18n="trcTitle">What I have built on TRC</h3>
+                            <p data-i18n="trcIntro">Model bring-up, new kernels, cross-accelerator validation, and bit-level hardware characterization across TPU v4, v5e, and v6e.</p>
+                        </header>
+                        <div class="trc-results-grid">
+                            <section class="trc-result trc-result-featured">
+                                <span class="result-status" data-i18n="workingBringup">Working bring-up</span>
+                                <h4>DeepSeek V4-Flash on TPU</h4>
+                                <p data-i18n="deepseekDesc">Running at 32-chip v4-64 scale through vLLM/tpu-inference, with all attention modes validated and both prefill and decode operational. To my knowledge, this is the first TPU bring-up of the model; upstream PRs are drafted.</p>
+                            </section>
+                            <section class="trc-result trc-result-featured">
+                                <span class="result-status" data-i18n="workInProgress">Work in progress</span>
+                                <h4 data-i18n="dsaTitle">DSA kernel for TPU</h4>
+                                <p data-i18n="dsaDesc">A working implementation that is bit-exact against the reference through 8K tokens and runs through 256K. To my knowledge, it is the first DSA implementation for TPU; it is the foundation of the GLM-5.2 port and is not yet finished.</p>
+                            </section>
+                            <section class="trc-result">
+                                <span class="result-status" data-i18n="validated">Validated</span>
+                                <h4>DriftBench on TPU</h4>
+                                <p data-i18n="driftTpuDesc">Extended the MLSys 2026 result to TPU v5e and v6e. The predictability result held across the new numerical path, with R² from 0.72 to 0.96.</p>
+                            </section>
+                            <section class="trc-result">
+                                <span class="result-status" data-i18n="researchInProgress">Research in progress</span>
+                                <h4 data-i18n="mxuTitle">Bit-level TPU MXU characterization</h4>
+                                <p data-i18n="mxuDesc">Built a CPU simulator that reproduces real Llama-3.1-8B matrix multiplications bit-for-bit on a native pass. The characterization targets MLSys 2027.</p>
+                            </section>
+                            <section class="trc-result">
+                                <span class="result-status" data-i18n="collaboration">Collaboration</span>
+                                <h4 data-i18n="genomicsTitle">Long-context genomics with CNR Italy</h4>
+                                <p data-i18n="genomicsDesc">A collaboration studying whether long-context DNA models encode linkage disequilibrium, combining ML systems work with genomics expertise at Italy’s National Research Council.</p>
+                            </section>
+                        </div>
+                        <footer class="trc-next"><span data-i18n="nextLabel">Next</span><p data-i18n="trcNext">Finish the DSA kernel and GLM-5.2 port, complete throughput work, and merge the DeepSeek TPU support upstream.</p></footer>
+                    </article>
+
+                    <article class="work-card review-card review-wide">
+                        <div class="card-kicker"><span>NeurIPS 2026</span><span data-i18n="twoFirstAuthor">2 first-author submissions</span></div>
+                        <h3 data-i18n="underReviewTitle">Currently under review</h3>
+                        <div class="submission-columns">
                             <div class="submission">
                                 <span class="submission-track" data-i18n="mainTrack">Main track</span>
                                 <h4>Decomposing One Professional-Framing Pipeline: Which Components Shift LLM Safety Boundaries?</h4>
@@ -158,9 +176,9 @@
                                 <h4>Natural Language Is Flatland for Machine Intelligence: AI Systems Should Decouple Their Reasoning Substrate from Human Language</h4>
                                 <p data-i18n="flatlandDesc">A position paper arguing for machine reasoning substrates that are not constrained by the structure of human language.</p>
                             </div>
-                            <p class="review-note" data-i18n="reviewNote">Submission status is reported without implying acceptance.</p>
-                        </article>
-                    </div>
+                        </div>
+                        <p class="review-note" data-i18n="reviewNote">Submission status is reported without implying acceptance.</p>
+                    </article>
                 </div>
             </section>
 
@@ -170,14 +188,10 @@
                         <p class="section-index">02 / <span data-i18n="serviceIndex">Academic service</span></p>
                         <h2 data-i18n="serviceTitle">Reviewing systems work from evidence to impact.</h2>
                     </div>
-                    <article class="service-feature">
-                        <div><span class="invitation-badge" data-i18n="invitedBadge">Invited · August 2026</span><h3 data-i18n="pcTitle">MLSys 2027 Program Committee</h3></div>
-                        <p data-i18n="pcDesc">Invited by the MLSys 2027 Program Chairs to serve on the Program Committee and contribute detailed reviews and active technical discussion. The invitation is listed here explicitly as an invitation, pending formal acceptance.</p>
-                    </article>
                     <div class="service-grid">
                         <article><span class="service-year">2026</span><h3 data-i18n="neuripsEthicsTitle">NeurIPS Ethics Reviewer</h3><p data-i18n="neuripsEthicsDesc">Reviewed submissions for ethical concerns, societal harms, research-integrity risks, and compliance with conference guidelines.</p></article>
                         <article><span class="service-year">2026</span><h3 data-i18n="sospTitle">SOSP Artifact Evaluation Committee</h3><p data-i18n="sospDesc">Evaluated research artifacts for availability, functionality, reproducibility, and consistency with the associated papers' experimental claims.</p></article>
-                        <article class="wide-service"><span class="service-year">2026</span><h3 data-i18n="mlsysAeTitle">MLSys Artifact Evaluation Committee</h3><p data-i18n="mlsysAeDesc">Reviewed four accepted papers spanning attention-kernel optimization, full-stack ML profiling, GPU memory disaggregation, and distributed inference. Reproduced results on rented 8×H100 clusters and AMD MI350X infrastructure; recommended the artifact that ultimately received the Distinguished Artifact Award.</p></article>
+                        <article><span class="service-year">2026</span><h3 data-i18n="mlsysAeTitle">MLSys Artifact Evaluation Committee</h3><p data-i18n="mlsysAeDesc">Reviewed four accepted papers spanning attention-kernel optimization, full-stack ML profiling, GPU memory disaggregation, and distributed inference. Reproduced results on rented 8×H100 clusters and AMD MI350X infrastructure; recommended the artifact that ultimately received the Distinguished Artifact Award.</p></article>
                     </div>
                 </div>
             </section>
@@ -233,7 +247,7 @@
         <footer>
             <div class="shell footer-grid">
                 <p>© <span id="current-year"></span> Gianluigi Vitale</p>
-                <p data-i18n="footerNote">ML systems research · Pistoia, Italy</p>
+                <p data-i18n="footerNote">ML systems research</p>
                 <a href="#top" data-i18n="backToTop">Back to top ↑</a>
             </div>
         </footer>

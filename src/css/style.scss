@@ -253,8 +253,8 @@ footer { background: $ink; color: #8fa6aa; padding: 25px 0; }
     }
     .language-switch { border: 0; margin: 18px 0 0; padding: 0; }
     .hero { min-height: calc(100vh - 70px); min-height: calc(100svh - 70px); padding-top: 65px; }
-    .hero-backdrop { animation: hero-mobile-photo-out 500ms 900ms ease both; inset: 0; opacity: 1; width: 100%; }
-    .hero-backdrop img { object-position: 27% center; }
+    .hero-backdrop { animation: hero-mobile-photo-out 500ms 900ms ease both; background: #020708; inset: 0; opacity: 1; width: 100%; }
+    .hero-backdrop img { object-fit: contain; object-position: center top; }
     .hero::after { animation: hero-overlay-in 500ms 900ms ease both; background: $paper; }
     .hero-grid { animation: hero-content-in 500ms 1250ms ease both; }
     h1 { font-size: clamp(46px, 14vw, 67px); }

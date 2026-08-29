@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nowReviewKey: 'In revisione', nowReviewValue: '2 submission NeurIPS 2026 come primo autore',
         nowServiceKey: 'Servizio', nowServiceValue: 'Ethics Reviewer NeurIPS · Artifact Evaluation MLSys e SOSP',
         oralPresentation: 'Presentazione orale', soleAuthor: 'Unico autore', acmBadges: 'Badge ACM: Available · Functional · Reproduced',
-        watchTalk: 'Guarda il talk MLSys 2026', recordedTalk: 'Talk registrato',
+        recordedTalk: 'Talk registrato',
         driftbenchDesc: 'DriftBench è un framework di misurazione e previsione composto da 236.985 coppie prompt-risposta in 105 configurazioni, 5 modelli, 4 piattaforme GPU, 3 framework e 3 precisioni. Il Portability Risk Index generalizza a hardware (R² = 0,909) e precisioni (R² = 0,763) mai visti, separando il drift sistematico hardware/precisione dai cambiamenti di framework/modello che richiedono nuove misurazioni. Nella validazione in produzione ha bloccato un aggiornamento ad alto drift in cui il 23,85% dei prompt di safety ha cambiato classificazione.',
         activeSince: 'Attivo da maggio 2026', trcTitle: 'Cosa ho costruito su TRC',
         trcIntro: 'Bring-up di modelli, nuovi kernel, validazione tra acceleratori e caratterizzazione hardware a livello di bit su TPU v4, v5e e v6e.',

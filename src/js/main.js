@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         collaboration: 'Collaborazione', genomicsTitle: 'Genomica long-context con il CNR',
         genomicsDesc: 'Una collaborazione per studiare se i modelli DNA long-context codificano il linkage disequilibrium, combinando ML systems e competenze genomiche del Consiglio Nazionale delle Ricerche.',
         twoFirstAuthor: '2 submission come primo autore',
-        underReviewTitle: 'Attualmente in revisione',
+        underReviewTitle: 'Submission NeurIPS 2026 in revisione',
         reviewSummary: 'Due submission come primo autore: una nel main track e una nel position paper track.',
         serviceIndex: 'Servizio accademico', serviceTitle: 'Valutare la ricerca sui sistemi, dalle evidenze all’impatto.',
         mlsysPcTitle: 'Membro del Program Committee — MLSys 2027',

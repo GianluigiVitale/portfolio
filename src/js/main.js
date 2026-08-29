@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         neuripsEthicsTitle: 'Ethics Reviewer NeurIPS',
         neuripsEthicsDesc: 'Revisione delle submission per criticità etiche, possibili danni sociali, rischi per l’integrità della ricerca e conformità alle linee guida della conferenza.',
         sospTitle: 'Artifact Evaluation Committee SOSP',
-        sospDesc: 'Valutazione degli artefatti di SANDHI, che unisce in modo adattivo componenti di modelli per ridurre l’impronta di memoria di modelli fine-tuned co-locati, e M2K, che rende esplicita l’interfaccia modello-kernel per rilevare bug di memoria nei kernel CUDA usati dai sistemi di inferenza LLM.',
+        sospDesc: 'Valutazione di artefatti di ricerca su serving multi-modello efficiente in memoria e analisi della sicurezza della memoria nei kernel CUDA per sistemi di inferenza LLM. Verifica di disponibilità, funzionalità, riproducibilità e coerenza con le affermazioni sperimentali dei paper associati.',
         mlsysAeTitle: 'Artifact Evaluation Committee MLSys',
         mlsysAeDesc: 'Revisione di quattro paper accettati su ottimizzazione di kernel di attenzione, profiling ML full-stack, disaggregazione della memoria GPU e inferenza distribuita. Risultati riprodotti su cluster 8×H100 a noleggio e infrastruttura AMD MI350X; raccomandato l’artefatto che ha poi ricevuto il Distinguished Artifact Award.',
         researchIndex: 'Agenda di ricerca', researchTitle: 'Seguire i guasti attraverso lo stack dei sistemi ML.',

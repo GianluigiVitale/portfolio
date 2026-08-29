@@ -1,15 +1,16 @@
 # Gianluigi Vitale - ML Systems Research Portfolio
 
-This is my research portfolio showcasing my work as an ML Systems researcher. The content is dynamically generated using JSON data with Handlebars templates for easy maintenance. Animations are implemented using ScrollRevealJS.
+This is my research portfolio showcasing my work in ML systems, LLM serving infrastructure, accelerator portability, and inference reliability. It is a bilingual, responsive static site built for GitHub Pages.
 
 **Key Features:**
-- Research interests in LLM Serving Infrastructure and Infrastructure Drift
 - Featured publication: DriftBench (MLSys 2026)
-- Timeline of academic and professional milestones
-- Terminal-style interactive information display
-- Responsive design supporting mobile, tablet, and desktop
+- Active Google TPU Research Cloud allocation and current TPU research
+- NeurIPS 2026 submissions under review
+- Academic service across MLSys, SOSP, and NeurIPS
+- Professional experience, education, and research profiles
+- English and Italian content with responsive desktop and mobile layouts
 
-**Technologies:** HTML, SCSS, JavaScript, jQuery, Handlebars, ScrollRevealJS.
+**Technologies:** Semantic HTML, SCSS, and vanilla JavaScript, compiled with Laravel Mix.
 
 ***
 ### [https://gianluigivitale.github.io/portfolio/](https://gianluigivitale.github.io/portfolio/)

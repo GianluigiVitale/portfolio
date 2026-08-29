@@ -1,170 +1,241 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr" class="sr">
+<!doctype html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Gianluigi Vitale - ML Systems Researcher</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gianluigi Vitale | ML Systems Researcher</title>
+        <meta name="description" content="Gianluigi Vitale researches infrastructure drift, LLM serving, accelerator portability, and reliable machine learning systems.">
+        <meta name="theme-color" content="#071a1d">
+        <link rel="canonical" href="https://gianluigivitale.github.io/portfolio/">
         <link rel="icon" href="assets/icon.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Gianluigi Vitale - ML Systems Researcher"/>
-        <meta property="og:image" content="assets/preview.jpg"/>
-        <meta property="og:description" content="ML Systems researcher. Sole-author of DriftBench (MLSys 2026). Building measurement infrastructure for LLM serving systems."/>
-        <meta property="og:url" content="https://gianluigivitale.github.io/portfolio"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="dist/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha256-usTqAE1ywvdMtksWzdeWzD75MsfJN0h0U7y2NtZL3N0=" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-        <script src="src/js/main.js" charset="utf-8"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGS3KLD4RW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-QGS3KLD4RW');
-    </script>
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Gianluigi Vitale | ML Systems Research">
+        <meta property="og:description" content="Infrastructure drift, LLM serving, accelerator portability, and reliable inference.">
+        <meta property="og:image" content="https://gianluigivitale.github.io/portfolio/assets/preview-v2.png">
+        <meta property="og:url" content="https://gianluigivitale.github.io/portfolio/">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Gianluigi Vitale | ML Systems Research">
+        <meta name="twitter:description" content="Infrastructure drift, LLM serving, accelerator portability, and reliable inference.">
+        <meta name="twitter:image" content="https://gianluigivitale.github.io/portfolio/assets/preview-v2.png">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Gianluigi Vitale",
+            "url": "https://gianluigivitale.github.io/portfolio/",
+            "email": "mailto:gianluigi.vitale11@gmail.com",
+            "jobTitle": "ML Systems Researcher and Systems Engineer",
+            "affiliation": [
+                {"@type": "Organization", "name": "Universitas Mercatorum"},
+                {"@type": "Organization", "name": "Italian Ministry of Culture"}
+            ],
+            "sameAs": [
+                "https://github.com/GianluigiVitale",
+                "https://www.linkedin.com/in/gianluigi-vitale615",
+                "https://orcid.org/0009-0007-6740-2695",
+                "https://scholar.google.com/citations?hl=en&user=x4K6NWUAAAAJ",
+                "https://openreview.net/profile?id=~Gianluigi_Vitale1"
+            ],
+            "knowsAbout": ["Machine learning systems", "LLM serving", "Infrastructure drift", "Accelerator portability", "Inference reliability"]
+        }
+        </script>
+        <script defer src="dist/main.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGS3KLD4RW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QGS3KLD4RW');
+        </script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <nav class="header-nav">
-                    <div class="languages">
-                        <img id="it" src="assets/it.png" alt="it">
-                        <img id="en" src="assets/en.png" alt="en">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header class="site-header">
+            <div class="shell nav-shell">
+                <a class="brand" href="#top" aria-label="Gianluigi Vitale, home">
+                    <span class="brand-mark" aria-hidden="true">GV</span>
+                    <span class="brand-name">Gianluigi Vitale</span>
+                </a>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                    <span></span><span></span><span></span>
+                    <span class="sr-only">Open navigation</span>
+                </button>
+                <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                    <a href="#work" data-i18n="navWork">Work</a>
+                    <a href="#research" data-i18n="navResearch">Research</a>
+                    <a href="#service" data-i18n="navService">Service</a>
+                    <a href="#profile" data-i18n="navProfile">Profile</a>
+                    <div class="language-switch" aria-label="Language">
+                        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+                        <span aria-hidden="true">/</span>
+                        <button type="button" data-lang="it" aria-pressed="false">IT</button>
                     </div>
-                    <ul>
-                        <li><a href="#research" id="goResearch">Research</a></li>
-                        <li><a href="#timeline" id="goTimeline">Timeline</a></li>
-                        <li><a href="#contact" id="goContacts">Contact</a></li>
-                    </ul>
                 </nav>
             </div>
         </header>
-        <section class="who-am-i">
-            <div class="container">
-                <div class="name">
-                    <h2 id="myName">&gt;</h2>
-                    <span class="input" id="name-input">&nbsp;&nbsp;</span>
-                </div>
-                <div class="description">
-                    <p id="description">ML Systems researcher. <strong>Sole-author of DriftBench</strong> (MLSys 2026). Building measurement infrastructure for LLM serving systems. Targeting a Fall 2027 PhD in ML Systems.</p>
-                </div>
-                <div class="about">
-                    <div class="terminal">
-                        <div class="terminal-header">
-                            <div class="header-button red"></div>
-                            <div class="header-button yellow"></div>
-                            <div class="header-button green"></div>
-                        </div>
-                        <div class="terminal-window">
-                            <div class="statement-added">   <!--   Here go the statements thanks to handlebars    -->
 
-                            </div>
-                            <div class="statement" id="statement-terminal">
-                                <div class="statement-input">
-                                    <span>> </span><span class="input" id="statement-light">&nbsp;</span>
-                                </div>
-                            </div>
+        <main id="main">
+            <section class="hero" id="top">
+                <div class="shell hero-grid">
+                    <div class="hero-copy">
+                        <p class="eyebrow" data-i18n="heroEyebrow">ML systems researcher · Systems engineer</p>
+                        <h1 data-i18n="heroTitle">Researching the systems beneath model behavior.</h1>
+                        <p class="hero-lede" data-i18n="heroLede">I build measurement frameworks for LLM serving reliability, benchmark accelerators and inference stacks, and study how infrastructure changes propagate into model outputs.</p>
+                        <p class="hero-proof" data-i18n="heroProof">Sole author of DriftBench at MLSys 2026 · Active Google TPU Research Cloud researcher · Invited to the MLSys 2027 Program Committee</p>
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="#work" data-i18n="viewResearch">Explore the research</a>
+                            <a class="button button-secondary" href="assets/CV_Gianluigi_Vitale.pdf" target="_blank" rel="noopener" data-i18n="downloadCv">Download CV</a>
                         </div>
                     </div>
+                    <aside class="now-panel" aria-label="Current research status">
+                        <div class="panel-label"><span class="status-dot"></span><span data-i18n="currentLabel">Current</span></div>
+                        <div class="now-item"><span class="now-key" data-i18n="nowComputeKey">Compute</span><strong data-i18n="nowComputeValue">320-chip Google TRC allocation</strong></div>
+                        <div class="now-item"><span class="now-key" data-i18n="nowReviewKey">Under review</span><strong data-i18n="nowReviewValue">2 first-author NeurIPS 2026 submissions</strong></div>
+                        <div class="now-item"><span class="now-key" data-i18n="nowServiceKey">Service</span><strong data-i18n="nowServiceValue">MLSys 2027 PC invitation</strong></div>
+                        <div class="now-item"><span class="now-key" data-i18n="nowBaseKey">Based in</span><strong>Pistoia, Italy</strong></div>
+                    </aside>
                 </div>
-                <div class="research" id="research">
-                    <h2>Research Interests</h2>
-                    <div class="research-areas">     <!--   Here go the research areas thanks to handlebars    -->
+                <div class="shell evidence-strip" aria-label="Research highlights">
+                    <div><strong>237K</strong><span data-i18n="metricEvaluations">DriftBench evaluations</span></div>
+                    <div><strong>R² .909</strong><span data-i18n="metricPrediction">hardware-drift prediction</span></div>
+                    <div><strong>320</strong><span data-i18n="metricTpu">TPU chips allocated</span></div>
+                    <div><strong>4</strong><span data-i18n="metricArtifacts">MLSys artifacts evaluated</span></div>
+                </div>
+            </section>
 
+            <section class="section section-light" id="work">
+                <div class="shell">
+                    <div class="section-heading">
+                        <p class="section-index">01 / <span data-i18n="workIndex">Selected work</span></p>
+                        <h2 data-i18n="workTitle">Measure the stack. Explain the change.</h2>
+                        <p data-i18n="workIntro">My work connects infrastructure-level changes to observable differences in model behavior, with an emphasis on reproducible evidence.</p>
                     </div>
-                    <div class="tags">     <!--   Here go the tags thanks to handlebars    -->
-
+                    <article class="featured-work">
+                        <div class="feature-main">
+                            <div class="work-label"><span>MLSys 2026</span><span data-i18n="oralPresentation">Oral presentation</span><span data-i18n="soleAuthor">Sole author</span></div>
+                            <h3>DriftBench: Measuring and Predicting Infrastructure Drift in LLM Serving Systems</h3>
+                            <p data-i18n="driftbenchDesc">A benchmark and predictive model for measuring how GPU architecture, numerical precision, and inference-framework changes silently alter LLM outputs. Across 237,000 evaluations, hardware-induced drift proved highly predictable while framework-induced drift generally required direct re-measurement.</p>
+                            <div class="inline-links">
+                                <a href="https://doi.org/10.5281/zenodo.19361066" target="_blank" rel="noopener">Paper / DOI <span aria-hidden="true">↗</span></a>
+                                <a href="https://github.com/GianluigiVitale/driftbench-ae" target="_blank" rel="noopener">Artifact <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                        <div class="feature-aside">
+                            <p class="mono-label" data-i18n="resultLabel">Key result</p>
+                            <strong>23.85%</strong>
+                            <p data-i18n="resultText">safety flip rate measured in an H100 → B200 migration</p>
+                            <div class="artifact-badges" aria-label="Artifact badges"><span>Available</span><span>Functional</span><span>Reproduced</span></div>
+                        </div>
+                    </article>
+                    <div class="work-grid">
+                        <article class="work-card trc-card">
+                            <div class="card-kicker"><span>Google Cloud</span><span data-i18n="activeSince">Active since May 2026</span></div>
+                            <h3 data-i18n="trcTitle">TPU Research Cloud allocation</h3>
+                            <p data-i18n="trcIntro">A 320-chip allocation supporting independent research on accelerator portability and LLM systems performance across US and EU zones.</p>
+                            <div class="allocation-grid">
+                                <div><strong>32</strong><span data-i18n="onDemand">on-demand v4 chips</span></div>
+                                <div><strong>288</strong><span data-i18n="spotChips">spot v4, v5e, and v6e chips</span></div>
+                            </div>
+                            <div class="progress-list">
+                                <div><span class="progress-tag complete" data-i18n="completed">Completed</span><p data-i18n="trcCompleted">Ported GLM model workloads to Cloud TPUs, resolved model/runtime compatibility issues, and validated correct execution.</p></div>
+                                <div><span class="progress-tag active" data-i18n="inProgress">In progress</span><p data-i18n="trcProgress">Extending the work into a broader study of accelerator portability and LLM systems performance across TPU generations.</p></div>
+                            </div>
+                        </article>
+                        <article class="work-card review-card">
+                            <div class="card-kicker"><span>NeurIPS 2026</span><span data-i18n="twoFirstAuthor">2 first-author submissions</span></div>
+                            <h3 data-i18n="underReviewTitle">Currently under review</h3>
+                            <div class="submission">
+                                <span class="submission-track" data-i18n="mainTrack">Main track</span>
+                                <h4>Decomposing One Professional-Framing Pipeline: Which Components Shift LLM Safety Boundaries?</h4>
+                                <p data-i18n="framingDesc">A factorial ablation across approximately 31,900 trials and nine LLMs, isolating how persona framing, terminology substitution, and moral justification affect model responses.</p>
+                            </div>
+                            <div class="submission">
+                                <span class="submission-track" data-i18n="positionTrack">Position paper track</span>
+                                <h4>Natural Language Is Flatland for Machine Intelligence: AI Systems Should Decouple Their Reasoning Substrate from Human Language</h4>
+                                <p data-i18n="flatlandDesc">A position paper arguing for machine reasoning substrates that are not constrained by the structure of human language.</p>
+                            </div>
+                            <p class="review-note" data-i18n="reviewNote">Submission status is reported without implying acceptance.</p>
+                        </article>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="paper" id="paper">
-            <div class="container">
-                <h2 id="title-paper">Featured Publication</h2>
-                <div class="paper-container">     <!--   Here go the paper details thanks to handlebars    -->
+            </section>
 
+            <section class="section section-dark" id="service">
+                <div class="shell">
+                    <div class="section-heading inverted">
+                        <p class="section-index">02 / <span data-i18n="serviceIndex">Academic service</span></p>
+                        <h2 data-i18n="serviceTitle">Reviewing systems work from evidence to impact.</h2>
+                    </div>
+                    <article class="service-feature">
+                        <div><span class="invitation-badge" data-i18n="invitedBadge">Invited · August 2026</span><h3 data-i18n="pcTitle">MLSys 2027 Program Committee</h3></div>
+                        <p data-i18n="pcDesc">Invited by the MLSys 2027 Program Chairs to serve on the Program Committee and contribute detailed reviews and active technical discussion. The invitation is listed here explicitly as an invitation, pending formal acceptance.</p>
+                    </article>
+                    <div class="service-grid">
+                        <article><span class="service-year">2026</span><h3 data-i18n="neuripsEthicsTitle">NeurIPS Ethics Reviewer</h3><p data-i18n="neuripsEthicsDesc">Reviewed submissions for ethical concerns, societal harms, research-integrity risks, and compliance with conference guidelines.</p></article>
+                        <article><span class="service-year">2026</span><h3 data-i18n="sospTitle">SOSP Artifact Evaluation Committee</h3><p data-i18n="sospDesc">Evaluated research artifacts for availability, functionality, reproducibility, and consistency with the associated papers' experimental claims.</p></article>
+                        <article class="wide-service"><span class="service-year">2026</span><h3 data-i18n="mlsysAeTitle">MLSys Artifact Evaluation Committee</h3><p data-i18n="mlsysAeDesc">Reviewed four accepted papers spanning attention-kernel optimization, full-stack ML profiling, GPU memory disaggregation, and distributed inference. Reproduced results on rented 8×H100 clusters and AMD MI350X infrastructure; recommended the artifact that ultimately received the Distinguished Artifact Award.</p></article>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="timeline-section" id="timeline">
-            <div class="container">
-                <h2 id="title-timeline">Timeline</h2>
-                <div class="timeline-container">     <!--   Here go the timeline items thanks to handlebars    -->
+            </section>
 
+            <section class="section section-paper" id="research">
+                <div class="shell">
+                    <div class="section-heading split-heading">
+                        <div><p class="section-index">03 / <span data-i18n="researchIndex">Research agenda</span></p><h2 data-i18n="researchTitle">Reliable inference is a systems problem.</h2></div>
+                        <p data-i18n="researchIntro">I am interested in the boundary between ML systems and model behavior: what changes, why it changes, and how we can know before a production migration.</p>
+                    </div>
+                    <div class="research-grid">
+                        <article><span>01</span><h3 data-i18n="areaServingTitle">LLM serving infrastructure</h3><p data-i18n="areaServingDesc">Performance characterization and inference-stack measurement across accelerators, frameworks, and precision modes.</p></article>
+                        <article><span>02</span><h3 data-i18n="areaDriftTitle">Infrastructure drift</h3><p data-i18n="areaDriftDesc">Quantifying behavioral changes when hardware or software environments shift, with implications for safety and reproducibility.</p></article>
+                        <article><span>03</span><h3 data-i18n="areaBenchTitle">ML systems benchmarking</h3><p data-i18n="areaBenchDesc">Evaluation frameworks and datasets for rigorous, reproducible measurement of production serving systems.</p></article>
+                        <article><span>04</span><h3 data-i18n="areaSafetyTitle">Safety and robustness</h3><p data-i18n="areaSafetyDesc">Studying how professional framing, retrieved context, and infrastructure choices affect refusal and safety behavior.</p></article>
+                    </div>
+                    <div class="methods" aria-label="Methods and systems"><span>PyTorch</span><span>vLLM</span><span>SGLang</span><span>TensorRT-LLM</span><span>CUDA</span><span>Cloud TPU</span><span>Docker</span><span>Hugging Face</span></div>
                 </div>
-            </div>
-        </section>
-        <section class="contacts" id="contact">
-            <div class="container">
-                <h2 id="contact-me">Contact me!</h2>
-                <div class="contact-links">
-                    <span>
-                        <a rel="noopener" target="_blank" href="mailto:gianluigi.vitale11@gmail.com">gianluigi.vitale11@gmail.com</a>
-                    </span>
-                    <span>
-                        <a rel="noopener" target="_blank" href="https://github.com/GianluigiVitale">GitHub</a>
-                    </span>
-                    <span>
-                        <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/gianluigi-vitale615">LinkedIn</a>
-                    </span>
-                    <span>
-                        <a rel="noopener" target="_blank" href="https://github.com/GianluigiVitale/driftbench-ae">DriftBench Artifact</a>
-                    </span>
+            </section>
+
+            <section class="section section-profile" id="profile">
+                <div class="shell profile-grid">
+                    <div><p class="section-index">04 / <span data-i18n="profileIndex">Profile</span></p><h2 data-i18n="profileTitle">Research grounded in deployed systems.</h2></div>
+                    <div class="profile-details">
+                        <article>
+                            <div class="profile-meta"><span data-i18n="experienceLabel">Experience</span><span>2024—<span data-i18n="present">present</span></span></div>
+                            <h3 data-i18n="ministryTitle">Systems Engineer · Italian Ministry of Culture</h3>
+                            <p data-i18n="ministryDesc">Designed and deployed a retrieval-augmented generation system over 10,000 internal administrative documents, providing source-cited answers. Built the first AI-assisted public consultation interface in an Italian state archive, opening natural-language access to the inventory database for staff and citizens.</p>
+                        </article>
+                        <article>
+                            <div class="profile-meta"><span data-i18n="educationLabel">Education</span><span data-i18n="expectedDate">Expected Feb. 2027</span></div>
+                            <h3 data-i18n="degreeTitle">B.Sc. in Computer Engineering · Universitas Mercatorum</h3>
+                            <p data-i18n="degreeDesc">GPA 29.03/30 (3.79/4.0 WES-converted). Thesis: DSProfiler — static analysis and machine learning for automated detection of data-structure performance anti-patterns in Python.</p>
+                        </article>
+                        <div class="profile-links">
+                            <a href="https://scholar.google.com/citations?hl=en&user=x4K6NWUAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+                            <a href="https://orcid.org/0009-0007-6740-2695" target="_blank" rel="noopener">ORCID ↗</a>
+                            <a href="https://openreview.net/profile?id=~Gianluigi_Vitale1" target="_blank" rel="noopener">OpenReview ↗</a>
+                            <a href="https://github.com/GianluigiVitale" target="_blank" rel="noopener">GitHub ↗</a>
+                            <a href="https://www.linkedin.com/in/gianluigi-vitale615" target="_blank" rel="noopener">LinkedIn ↗</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section class="contact-band">
+                <div class="shell contact-grid">
+                    <div><p class="eyebrow" data-i18n="contactEyebrow">Research conversations & PhD opportunities</p><h2 data-i18n="contactTitle">Let’s talk about reliable ML systems.</h2></div>
+                    <a href="mailto:gianluigi.vitale11@gmail.com">gianluigi.vitale11@gmail.com <span aria-hidden="true">↗</span></a>
+                </div>
+            </section>
+        </main>
         <footer>
-            <span id="madeby">Made by Gianluigi Vitale © </span><span id="currentYear"></span>
+            <div class="shell footer-grid">
+                <p>© <span id="current-year"></span> Gianluigi Vitale</p>
+                <p data-i18n="footerNote">ML systems research · Pistoia, Italy</p>
+                <a href="#top" data-i18n="backToTop">Back to top ↑</a>
+            </div>
         </footer>
-
-
-
-        <!-- SCRIPTS -->
-
-
-
-        <script id="statement-template" type="text/x-handlebars-template">      <!--   Handlebars template to create statements div    -->
-            <div class="statement" id="{{id}}">
-                <div class="statement-input">
-                    <p>{{input}}</p>
-                </div>
-                <div class="statement-response">
-                    <p>{{{response}}}</p>
-                </div>
-            </div>
-        </script>
-
-        <script id="research-template" type="text/x-handlebars-template">      <!--   Handlebars template to create research areas div    -->
-            <div class="research-card" id="{{id}}">
-                <div class="card-icon">{{icon}}</div>
-                <h3>{{title}}</h3>
-                <p>{{description}}</p>
-            </div>
-        </script>
-
-        <script id="tag-template" type="text/x-handlebars-template">      <!--   Handlebars template to create tags    -->
-            <span class="tag">{{tagName}}</span>
-        </script>
-
-        <script id="paper-template" type="text/x-handlebars-template">  <!--   Handlebars template to create paper details    -->
-            <div class="paper-card">
-                <div class="paper-label">{{{label}}}</div>
-                <h3 class="paper-title">{{{title}}}</h3>
-                <div class="paper-meta">{{{meta}}}</div>
-                <p class="paper-desc">{{{description}}}</p>
-            </div>
-        </script>
-
-        <script id="timeline-template" type="text/x-handlebars-template">  <!--   Handlebars template to create timeline items    -->
-            <div class="timeline-item" id="{{id}}">
-                <div class="timeline-year">{{year}}</div>
-                <div class="timeline-content">
-                    <h3>{{title}}</h3>
-                    <p>{{description}}</p>
-                </div>
-            </div>
-        </script>
     </body>
 </html>

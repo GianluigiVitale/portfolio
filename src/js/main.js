@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         activeSince: 'Attivo da maggio 2026', trcTitle: 'Cosa ho costruito su TRC',
         trcIntro: 'Bring-up di modelli, nuovi kernel, validazione tra acceleratori e caratterizzazione hardware a livello di bit su TPU v4, v5e e v6e.',
         workingBringup: 'Bring-up funzionante',
-        deepseekDesc: 'Ho completato un bring-up su 32 chip v4-64, validando tutte le modalità di attenzione con prefill e decode operativi. Un supporto equivalente è ora implementato in vLLM TPU inference grazie a un lavoro parallelo dell’ecosistema, indipendente dalle mie PR preparate.',
+        deepseekDesc: 'Ho completato un bring-up su 32 chip v4-64, validando tutte le modalità di attenzione con prefill e decode operativi. Un supporto equivalente è stato successivamente integrato in vLLM TPU inference attraverso uno sviluppo parallelo nell’ecosistema più ampio.',
         workInProgress: 'Lavoro in corso', dsaTitle: 'Kernel DSA per TPU',
         dsaDesc: 'Un’implementazione funzionante, bit-exact rispetto al riferimento fino a 8K token e in esecuzione fino a 256K. È la base del porting GLM-5.2 e rimane un lavoro in corso.',
         validated: 'Validato',

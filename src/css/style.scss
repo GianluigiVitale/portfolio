@@ -212,7 +212,7 @@ footer { background: $ink; color: #8fa6aa; padding: 25px 0; }
 
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes hero-backdrop-dock { from { left: 0; width: 100%; } to { left: 55%; width: 45%; } }
-@keyframes hero-mobile-photo-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes hero-mobile-photo-out { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-12px); } }
 @keyframes hero-overlay-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes hero-content-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) {
@@ -253,10 +253,10 @@ footer { background: $ink; color: #8fa6aa; padding: 25px 0; }
     }
     .language-switch { border: 0; margin: 18px 0 0; padding: 0; }
     .hero { min-height: calc(100vh - 70px); min-height: calc(100svh - 70px); padding-top: 65px; }
-    .hero-backdrop { animation: hero-mobile-photo-out 500ms 900ms ease both; background: #020708; inset: 0; opacity: 1; width: 100%; }
+    .hero-backdrop { animation: hero-mobile-photo-out 500ms 900ms ease both; background: $paper; inset: 0; opacity: 1; width: 100%; }
     .hero-backdrop img { object-fit: contain; object-position: center top; }
     .hero::after { animation: hero-overlay-in 500ms 900ms ease both; background: $paper; }
-    .hero-grid { animation: hero-content-in 500ms 1250ms ease both; }
+    .hero-grid { animation: hero-content-in 500ms 950ms ease both; }
     h1 { font-size: clamp(46px, 14vw, 67px); }
     .hero-lede { font-size: 18px; }
     .section { padding: 82px 0; }

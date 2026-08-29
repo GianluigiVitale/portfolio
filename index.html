@@ -27,7 +27,7 @@
             "@type": "Person",
             "name": "Gianluigi Vitale",
             "url": "https://gianluigivitale.github.io/portfolio/",
-            "email": "mailto:gianluigi.vitale11@gmail.com",
+            "email": "mailto:gianluigi.vitale12@gmail.com",
             "jobTitle": "ML Systems Researcher and Systems Engineer",
             "affiliation": [
                 {"@type": "Organization", "name": "Universitas Mercatorum"},
@@ -80,6 +80,9 @@
 
         <main id="main">
             <section class="hero" id="top">
+                <div class="hero-backdrop" aria-hidden="true">
+                    <img src="assets/driftbench-mlsys-talk.png" alt="">
+                </div>
                 <div class="shell hero-grid">
                     <div class="hero-copy">
                         <p class="eyebrow" data-i18n="heroEyebrow">ML systems researcher · Systems engineer</p>
@@ -108,7 +111,7 @@
                         </a>
                         <div class="feature-body">
                             <div class="feature-main">
-                                <div class="work-label"><span>MLSys 2026</span><span data-i18n="oralPresentation">Oral presentation</span><span data-i18n="soleAuthor">Sole author</span></div>
+                                <div class="work-label"><span>MLSys 2026</span><span data-i18n="oralPresentation">Oral presentation</span><span data-i18n="soleAuthor">Sole author</span><span data-i18n="acmBadges">ACM badges: Available · Functional · Reproduced</span></div>
                                 <h3>DriftBench: Measuring and Predicting Infrastructure Drift in LLM Serving Systems</h3>
                                 <p data-i18n="driftbenchDesc">DriftBench is a measurement and prediction framework comprising 236,985 prompt-response pairs across 105 configurations, 5 models, 4 GPU platforms, 3 frameworks, and 3 precisions. Its Portability Risk Index generalizes to unseen hardware (R² = 0.909) and precision (R² = 0.763), separating systematic hardware/precision drift from framework/model changes that require re-measurement. In production validation, it blocked a high-drift upgrade where 23.85% of safety prompts flipped classification.</p>
                                 <div class="inline-links">
@@ -116,12 +119,6 @@
                                     <a href="https://doi.org/10.5281/zenodo.19361066" target="_blank" rel="noopener">Artifacts & dataset <span aria-hidden="true">↗</span></a>
                                     <a href="https://www.youtube.com/watch?v=KnsVj5DdIEo" target="_blank" rel="noopener"><span data-i18n="recordedTalk">Recorded talk</span> <span aria-hidden="true">↗</span></a>
                                 </div>
-                            </div>
-                            <div class="feature-aside">
-                                <p class="mono-label" data-i18n="resultLabel">Production result</p>
-                                <strong>23.85%</strong>
-                                <p data-i18n="resultText">of safety prompts flipped classification during a high-drift infrastructure upgrade</p>
-                                <div class="artifact-badges" aria-label="Artifact badges"><span>Available</span><span>Functional</span><span>Reproduced</span></div>
                             </div>
                         </div>
                     </article>
@@ -136,12 +133,12 @@
                             <section class="trc-result trc-result-featured">
                                 <span class="result-status" data-i18n="workingBringup">Working bring-up</span>
                                 <h4>DeepSeek V4-Flash on TPU</h4>
-                                <p data-i18n="deepseekDesc">Running at 32-chip v4-64 scale through vLLM/tpu-inference, with all attention modes validated and both prefill and decode operational. To my knowledge, this is the first TPU bring-up of the model; upstream PRs are drafted.</p>
+                                <p data-i18n="deepseekDesc">I completed a 32-chip v4-64 bring-up with every attention mode validated and both prefill and decode operational. Equivalent support is now implemented in vLLM TPU inference through parallel ecosystem work, independently of my drafted PRs.</p>
                             </section>
                             <section class="trc-result trc-result-featured">
                                 <span class="result-status" data-i18n="workInProgress">Work in progress</span>
                                 <h4 data-i18n="dsaTitle">DSA kernel for TPU</h4>
-                                <p data-i18n="dsaDesc">A working implementation that is bit-exact against the reference through 8K tokens and runs through 256K. To my knowledge, it is the first DSA implementation for TPU; it is the foundation of the GLM-5.2 port and is not yet finished.</p>
+                                <p data-i18n="dsaDesc">A working implementation that is bit-exact against the reference through 8K tokens and runs through 256K. It is the foundation of the GLM-5.2 port and remains work in progress.</p>
                             </section>
                             <section class="trc-result">
                                 <span class="result-status" data-i18n="validated">Validated</span>
@@ -151,7 +148,7 @@
                             <section class="trc-result">
                                 <span class="result-status" data-i18n="researchInProgress">Research in progress</span>
                                 <h4 data-i18n="mxuTitle">Bit-level TPU MXU characterization</h4>
-                                <p data-i18n="mxuDesc">Built a CPU simulator that reproduces real Llama-3.1-8B matrix multiplications bit-for-bit on a native pass. The characterization targets MLSys 2027.</p>
+                                <p data-i18n="mxuDesc">Built a CPU simulator that reproduces real Llama-3.1-8B matrix multiplications bit-for-bit on a native pass, enabling deterministic study of TPU numerical behavior.</p>
                             </section>
                             <section class="trc-result">
                                 <span class="result-status" data-i18n="collaboration">Collaboration</span>
@@ -159,7 +156,6 @@
                                 <p data-i18n="genomicsDesc">A collaboration studying whether long-context DNA models encode linkage disequilibrium, combining ML systems work with genomics expertise at Italy’s National Research Council.</p>
                             </section>
                         </div>
-                        <footer class="trc-next"><span data-i18n="nextLabel">Next</span><p data-i18n="trcNext">Finish the DSA kernel and GLM-5.2 port, complete throughput work, and merge the DeepSeek TPU support upstream.</p></footer>
                     </article>
 
                     <article class="work-card review-card review-wide">
@@ -190,7 +186,7 @@
                     </div>
                     <div class="service-grid">
                         <article><span class="service-year">2026</span><h3 data-i18n="neuripsEthicsTitle">NeurIPS Ethics Reviewer</h3><p data-i18n="neuripsEthicsDesc">Reviewed submissions for ethical concerns, societal harms, research-integrity risks, and compliance with conference guidelines.</p></article>
-                        <article><span class="service-year">2026</span><h3 data-i18n="sospTitle">SOSP Artifact Evaluation Committee</h3><p data-i18n="sospDesc">Evaluated research artifacts for availability, functionality, reproducibility, and consistency with the associated papers' experimental claims.</p></article>
+                        <article><span class="service-year">2026</span><h3 data-i18n="sospTitle">SOSP Artifact Evaluation Committee</h3><p data-i18n="sospDesc">Evaluated artifacts for SANDHI, which adaptively merges model components to reduce the memory footprint of co-located fine-tuned models, and M2K, which makes the model-kernel interface explicit to detect memory bugs in CUDA kernels used by LLM inference systems.</p></article>
                         <article><span class="service-year">2026</span><h3 data-i18n="mlsysAeTitle">MLSys Artifact Evaluation Committee</h3><p data-i18n="mlsysAeDesc">Reviewed four accepted papers spanning attention-kernel optimization, full-stack ML profiling, GPU memory disaggregation, and distributed inference. Reproduced results on rented 8×H100 clusters and AMD MI350X infrastructure; recommended the artifact that ultimately received the Distinguished Artifact Award.</p></article>
                     </div>
                 </div>
@@ -199,14 +195,14 @@
             <section class="section section-paper" id="research">
                 <div class="shell">
                     <div class="section-heading split-heading">
-                        <div><p class="section-index">03 / <span data-i18n="researchIndex">Research agenda</span></p><h2 data-i18n="researchTitle">Reliable inference is a systems problem.</h2></div>
-                        <p data-i18n="researchIntro">I am interested in the boundary between ML systems and model behavior: what changes, why it changes, and how we can know before a production migration.</p>
+                        <div><p class="section-index">03 / <span data-i18n="researchIndex">Research agenda</span></p><h2 data-i18n="researchTitle">Following failures across the ML systems stack.</h2></div>
+                        <p data-i18n="researchIntro">My work connects hardware arithmetic, kernels, serving infrastructure, and model behavior. I study where assumptions break and build evidence that makes complex AI systems easier to trust, reproduce, and deploy.</p>
                     </div>
                     <div class="research-grid">
-                        <article><span>01</span><h3 data-i18n="areaServingTitle">LLM serving infrastructure</h3><p data-i18n="areaServingDesc">Performance characterization and inference-stack measurement across accelerators, frameworks, and precision modes.</p></article>
-                        <article><span>02</span><h3 data-i18n="areaDriftTitle">Infrastructure drift</h3><p data-i18n="areaDriftDesc">Quantifying behavioral changes when hardware or software environments shift, with implications for safety and reproducibility.</p></article>
-                        <article><span>03</span><h3 data-i18n="areaBenchTitle">ML systems benchmarking</h3><p data-i18n="areaBenchDesc">Evaluation frameworks and datasets for rigorous, reproducible measurement of production serving systems.</p></article>
-                        <article><span>04</span><h3 data-i18n="areaSafetyTitle">Safety and robustness</h3><p data-i18n="areaSafetyDesc">Studying how professional framing, retrieved context, and infrastructure choices affect refusal and safety behavior.</p></article>
+                        <article><span>01</span><h3 data-i18n="areaServingTitle">Systems and serving</h3><p data-i18n="areaServingDesc">Building and evaluating infrastructure for efficient, reliable model execution across accelerators and deployment settings.</p></article>
+                        <article><span>02</span><h3 data-i18n="areaDriftTitle">Hardware and numerical behavior</h3><p data-i18n="areaDriftDesc">Understanding how arithmetic, precision, and kernels shape correctness, performance, and reproducibility.</p></article>
+                        <article><span>03</span><h3 data-i18n="areaBenchTitle">Reliability and safety</h3><p data-i18n="areaBenchDesc">Measuring when system or context changes alter model outputs and surfacing risk before deployment.</p></article>
+                        <article><span>04</span><h3 data-i18n="areaSafetyTitle">ML systems across domains</h3><p data-i18n="areaSafetyDesc">Applying systems and long-context methods to domains including genomics and public-sector information access.</p></article>
                     </div>
                     <div class="methods" aria-label="Methods and systems"><span>PyTorch</span><span>vLLM</span><span>SGLang</span><span>TensorRT-LLM</span><span>CUDA</span><span>Cloud TPU</span><span>Docker</span><span>Hugging Face</span></div>
                 </div>
@@ -240,7 +236,7 @@
             <section class="contact-band">
                 <div class="shell contact-grid">
                     <div><p class="eyebrow" data-i18n="contactEyebrow">Research conversations & PhD opportunities</p><h2 data-i18n="contactTitle">Let’s talk about reliable ML systems.</h2></div>
-                    <a href="mailto:gianluigi.vitale11@gmail.com">gianluigi.vitale11@gmail.com <span aria-hidden="true">↗</span></a>
+                    <a href="mailto:gianluigi.vitale12@gmail.com">gianluigi.vitale12@gmail.com <span aria-hidden="true">↗</span></a>
                 </div>
             </section>
         </main>

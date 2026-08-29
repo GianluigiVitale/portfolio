@@ -57,9 +57,11 @@ h1, h2, h3, h4, p { margin-top: 0; }
 }
 .menu-toggle { background: none; border: 0; cursor: pointer; display: none; padding: 8px; > span:not(.sr-only) { background: $ink; display: block; height: 2px; margin: 4px 0; width: 24px; } }
 
-.hero { background: $paper; overflow: hidden; padding: 94px 0 84px; position: relative; }
-.hero::after { border: 1px solid rgba(21, 95, 78, 0.18); border-radius: 50%; content: ''; height: 520px; position: absolute; right: -250px; top: -190px; width: 520px; }
-.hero-grid { align-items: end; display: grid; gap: 78px; grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.7fr); }
+.hero { background: $paper; isolation: isolate; overflow: hidden; padding: 94px 0 84px; position: relative; }
+.hero-backdrop { inset: 0; position: absolute; z-index: -2; }
+.hero-backdrop img { filter: saturate(0.82) contrast(0.94); height: 100%; object-fit: cover; object-position: center 40%; width: 100%; }
+.hero::after { background: linear-gradient(90deg, rgba(243, 240, 232, 0.94) 0%, rgba(243, 240, 232, 0.82) 48%, rgba(243, 240, 232, 0.44) 100%); content: ''; inset: 0; position: absolute; z-index: -1; }
+.hero-grid { align-items: end; display: grid; gap: 78px; grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.7fr); position: relative; }
 .hero-copy { animation: rise 600ms ease both; max-width: 790px; }
 .eyebrow, .section-index, .mono-label, .card-kicker, .profile-meta { font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; }
 .eyebrow { color: $mint-dark; font-size: 12px; font-weight: 500; margin-bottom: 28px; }
@@ -125,11 +127,11 @@ h1 { color: $ink; font-size: clamp(52px, 7vw, 92px); font-weight: 600; letter-sp
     z-index: 1;
 }
 .play-mark { align-items: center; background: $mint; border-radius: 50%; color: $ink; display: inline-flex; font-size: 10px; height: 34px; justify-content: center; padding-left: 2px; width: 34px; }
-.feature-body { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.65fr); }
+.feature-body { display: block; }
 .feature-main {
     padding: 45px;
     h3 { color: $ink; font-size: clamp(27px, 3.5vw, 43px); font-weight: 600; letter-spacing: -0.045em; line-height: 1.12; margin-bottom: 24px; max-width: 770px; }
-    > p { color: $muted; font-size: 16px; max-width: 730px; }
+    > p { color: $muted; font-size: 16px; max-width: 900px; }
 }
 .work-label, .card-kicker {
     display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px;
@@ -272,6 +274,8 @@ footer { background: $ink; color: #8fa6aa; padding: 25px 0; }
     }
     .language-switch { border: 0; margin: 18px 0 0; padding: 0; }
     .hero { padding-top: 65px; }
+    .hero-backdrop img { object-position: 42% center; }
+    .hero::after { background: linear-gradient(180deg, rgba(243, 240, 232, 0.72) 0%, rgba(243, 240, 232, 0.92) 55%, $paper 100%); }
     h1 { font-size: clamp(46px, 14vw, 67px); }
     .hero-lede { font-size: 18px; }
     .section { padding: 82px 0; }

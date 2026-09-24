@@ -3,9 +3,8 @@
 This is my research portfolio showcasing my work in ML systems, LLM serving infrastructure, accelerator portability, and inference reliability. It is a bilingual, responsive static site built for GitHub Pages.
 
 **Key Features:**
-- Featured publication: DriftBench (MLSys 2026)
+- Publications: accepted NeurIPS 2026 main-track poster and DriftBench (MLSys 2026 oral)
 - Active Google TPU Research Cloud allocation and current TPU research
-- Two first-author NeurIPS 2026 submissions under review: one main-track paper and one position paper
 - Academic service: MLSys 2027 Program Committee, MLSys and SOSP artifact evaluation, and NeurIPS ethics review
 - Professional experience, education, and research profiles
 - English and Italian content with responsive desktop and mobile layouts

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var navigation = document.querySelector('.site-nav');
     var languageButtons = document.querySelectorAll('[data-lang]');
     var translatableNodes = document.querySelectorAll('[data-i18n]');
+    var localizedLinks = document.querySelectorAll('[data-href-it]');
 
     var italian = {
         navWork: 'Progetti', navResearch: 'Ricerca', navService: 'Comitati', navProfile: 'Profilo',
@@ -63,11 +64,17 @@ document.addEventListener('DOMContentLoaded', function () {
     translatableNodes.forEach(function (node) {
         node.dataset.enText = node.textContent;
     });
+    localizedLinks.forEach(function (link) {
+        link.dataset.hrefEn = link.getAttribute('href');
+    });
 
     function setLanguage(language) {
         translatableNodes.forEach(function (node) {
             var key = node.dataset.i18n;
             node.textContent = language === 'it' && italian[key] ? italian[key] : node.dataset.enText;
+        });
+        localizedLinks.forEach(function (link) {
+            link.setAttribute('href', language === 'it' ? link.dataset.hrefIt : link.dataset.hrefEn);
         });
         languageButtons.forEach(function (button) {
             button.setAttribute('aria-pressed', String(button.dataset.lang === language));

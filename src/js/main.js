@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         workingBringup: 'Porting funzionante',
         deepseekDesc: 'Ho portato il modello su 32 chip (v4-64), validando tutte le modalità di attenzione con prefill e decode funzionanti. Un supporto equivalente è poi arrivato in vLLM TPU inference grazie a sviluppi paralleli nel resto dell’ecosistema.',
         workInProgress: 'In corso', dsaTitle: 'Kernel DSA per TPU',
-        dsaDesc: 'Un’implementazione funzionante, identica bit per bit al riferimento fino a 8K token e in grado di arrivare a 256K. È la base del porting di GLM-5.2 ed è tuttora in sviluppo.',
+        dsaDesc: 'Un’implementazione funzionante, identica bit per bit al riferimento fino a 8K token e in grado di arrivare a 256K. È alla base del porting di GLM-5.3, ora in esecuzione su TPU v4, ed è tuttora in sviluppo.',
         validated: 'Validato',
         driftTpuDesc: 'Ho esteso il risultato di MLSys 2026 alle TPU v5e e v6e. La prevedibilità si è confermata anche con l’aritmetica delle TPU, con R² compreso tra 0,72 e 0,96.',
         researchInProgress: 'Ricerca in corso', mxuTitle: 'Caratterizzazione a livello di bit della MXU delle TPU',
@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
         profileIndex: 'Profilo', profileTitle: 'Una ricerca che parte da sistemi in produzione.', experienceLabel: 'Esperienza', present: 'oggi',
         ministryTitle: 'Systems Engineer — Archivio di Stato di Pistoia, Ministero della Cultura',
         ministryDesc: 'Progettazione e messa in produzione di un sistema di retrieval-augmented generation (RAG) su oltre 10.000 documenti amministrativi interni, che risponde alle domande del personale citando le fonti. Realizzazione di un’interfaccia di consultazione pubblica basata sull’AI, che permette a personale e cittadini di interrogare in linguaggio naturale l’intero database dell’inventario.',
-        educationLabel: 'Formazione', expectedDate: 'Prevista a febbraio 2027',
+        educationLabel: 'Formazione', expectedDate: 'Prevista a marzo 2027',
         degreeTitle: 'Laurea triennale in Ingegneria Informatica · Universitas Mercatorum',
-        degreeDesc: 'Media 29,03/30 (3,79/4,0 secondo la conversione WES). Tesi: DSProfiler — analisi statica e machine learning per l’individuazione automatica di anti-pattern prestazionali nell’uso delle strutture dati in Python.',
+        degreeDesc: 'Media 29,35/30 (3,87/4,0 secondo la conversione WES). Tesi: DSProfiler — analisi statica e machine learning per l’individuazione automatica di anti-pattern prestazionali nell’uso delle strutture dati in Python.',
         contactEyebrow: 'Collaborazioni di ricerca e opportunità di dottorato', contactTitle: 'Parliamo di sistemi ML affidabili.',
         footerNote: 'Ricerca sui sistemi ML', backToTop: 'Torna su ↑'
     };

@@ -1,0 +1,7 @@
+# Deploy at https://gianluigivitale.github.io/robots.txt to take effect.
+# A copy under /portfolio/ does not control crawler access.
+# This policy permits all crawlers, including search and AI training crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://gianluigivitale.github.io/portfolio/sitemap.xml

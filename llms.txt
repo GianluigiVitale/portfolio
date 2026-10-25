@@ -1,0 +1,29 @@
+# Gianluigi Vitale
+
+> Gianluigi Vitale researches ML systems and LLM safety, with publications at NeurIPS 2026 and MLSys 2026.
+
+Personal research portfolio. The HTML page is the primary source; the Markdown edition contains its English text. The HTML interface also offers an Italian translation.
+
+## Portfolio
+
+- [Portfolio text](https://gianluigivitale.github.io/portfolio/index.md): Research, publications, service, experience, education, and contact details.
+- [Official website](https://gianluigivitale.github.io/portfolio/): Original HTML portfolio.
+
+## Curriculum vitae
+
+- [CV (English)](https://gianluigivitale.github.io/portfolio/assets/CV_Gianluigi_Vitale.pdf): Public curriculum vitae in PDF.
+- [CV (Italian)](https://gianluigivitale.github.io/portfolio/assets/CV_Gianluigi_Vitale_it.pdf): Public curriculum vitae in PDF.
+
+## Research profiles
+
+- [github.com](https://github.com/GianluigiVitale)
+- [www.linkedin.com](https://www.linkedin.com/in/gianluigi-vitale615)
+- [orcid.org](https://orcid.org/0009-0007-6740-2695)
+- [scholar.google.com](https://scholar.google.com/citations?hl=en&user=x4K6NWUAAAAJ)
+- [openreview.net](https://openreview.net/profile?id=~Gianluigi_Vitale1)
+
+## Publications and artifacts
+
+- [MLSys proceedings](https://proceedings.mlsys.org/paper_files/paper/2026/hash/ea0b5818ae9255ee1fb1e3b4442d2ffe-Abstract-Conference.html)
+- [Artifacts & dataset](https://doi.org/10.5281/zenodo.19361066)
+- [Paper on OpenReview](https://openreview.net/forum?id=1UvkQdlJOO)

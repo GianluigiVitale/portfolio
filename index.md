@@ -20,13 +20,15 @@ Latest publication STF · NeurIPS 2026 poster
 
 MLSys 2026 DriftBench · oral · sole author
 
+Under review MLSys 2027 · Cross-generation numerical agreement on TPUs
+
 Service MLSys 2027 Program Committee · NeurIPS Ethics · MLSys & SOSP Artifact Evaluation
 
 MLSys 2026 Oral presentation Sole author ACM badges: Available · Functional · Reproduced
 
 #### DriftBench: Measuring and Predicting Infrastructure Drift in LLM Serving Systems
 
-DriftBench is a measurement and prediction framework comprising 236,985 prompt-response pairs across 105 configurations, 5 models, 4 GPU platforms, 3 frameworks, and 3 precisions. Its Portability Risk Index generalizes to unseen hardware (R² = 0.909) and precision (R² = 0.763), separating systematic hardware/precision drift from framework/model changes that require re-measurement. In production validation, it blocked a high-drift upgrade where 23.85% of safety prompts flipped classification.
+DriftBench is a measurement and prediction framework comprising 236,985 prompt-response pairs across 105 configurations, 5 models, 4 GPU platforms, 3 frameworks, and 3 precisions. Its Portability Risk Index generalizes to unseen hardware (R² = 0.909) and precision (R² = 0.763), separating systematic hardware/precision drift from framework/model changes that require re-measurement. In a migration case study that passed throughput, latency, and perplexity checks, 23.85% of safety labels flipped while the net unsafe rate rose by only 1.15 points.
 
 [MLSys proceedings](https://proceedings.mlsys.org/paper_files/paper/2026/hash/ea0b5818ae9255ee1fb1e3b4442d2ffe-Abstract-Conference.html) [Artifacts & dataset](https://doi.org/10.5281/zenodo.19361066) [Recorded talk](https://www.youtube.com/watch?v=KnsVj5DdIEo)
 
@@ -34,7 +36,7 @@ Google TPU Research Cloud Active since May 2026
 
 #### Research built with Google TPU Research Cloud
 
-Model bring-up, new kernels, cross-accelerator validation, and bit-level hardware characterization across TPU v4, v5e, and v6e.
+Model bring-up, new kernels, and cross-accelerator validation across TPU v4, v5e, and v6e.
 
 Working bring-up
 
@@ -54,25 +56,25 @@ Validated
 
 Extended the MLSys 2026 result to TPU v5e and v6e. The predictability result held across the new numerical path, with R² from 0.72 to 0.96.
 
-Research in progress
-
-##### Bit-level TPU MXU characterization
-
-Built a CPU simulator that reproduces real Llama-3.1-8B matrix multiplications bit-for-bit on a native pass, enabling deterministic study of TPU numerical behavior.
-
 Collaboration
 
-##### Long-context genomics with CNR Italy
+##### Long-context genomics with ICAR-CNR
 
-A collaboration studying whether long-context DNA models encode linkage disequilibrium, combining ML systems work with genomics expertise at Italy’s National Research Council.
+A collaboration studying whether long-context DNA models encode linkage disequilibrium, combining ML systems work with genomics expertise at ICAR-CNR (Italy’s National Research Council).
 
 NeurIPS 2026 · Main track Accepted poster · Sole author
 
 #### Decomposing One Professional-Framing Pipeline: Which Components Shift LLM Safety Boundaries?
 
-A pre-specified 2×2×2 factorial ablation of the STF professional-framing pipeline, evaluated in approximately 31,900 trials across nine LLMs. Persona adoption was the main driver of acceptance (OR = 6.5), terminology substitution the main driver of response depth (β = 0.91), and moral justification showed no detectable positive effect at the stated equivalence bounds.
+A pre-specified 2×2×2 factorial ablation of the STF professional-framing pipeline: 5,000 human-labeled trials on three closed frontier models in the primary study, four 5,000-trial factorials (20,000 trials) in total, and behavioral checks on six open-weight models. A professional persona was the main driver of acceptance (OR = 6.5), Linguistic Substitution the main driver of response depth (cumulative-logit coefficient β = 0.91), and moral justification showed no detectable positive effect on acceptance.
 
 [Paper on OpenReview](https://openreview.net/forum?id=1UvkQdlJOO)
+
+Under review · MLSys 2027 G. Vitale · R. Pietrini
+
+#### Cross-Generation Numerical Agreement of LLM Inference on TPUs
+
+Probing TPU v4, v5e, and v6e from outside, we localized cross-generation bf16 matrix-multiplication differences to the compiled cross-pass reduction order, and a CPU emulator reproduced 34.6M fresh outputs bit for bit on all three generations (bf16, default precision, four standard input regimes). Matching matrix multiplications alone does not make the model agree: whole-program pinning yields identical logits and greedy text on all three generations, and identical vLLM output on v5e and v6e.
 
 02 / Academic service
 
@@ -93,6 +95,8 @@ Reviewed submissions for ethical concerns, societal harms, research-integrity ri
 2026
 
 #### Artifact Evaluation Committee Member — SOSP 2026
+
+Distinguished Artifact Evaluator Award
 
 Evaluated research artifacts in memory-efficient model serving and memory-safety analysis for GPU kernels in LLM inference systems. Assessed availability, functionality, reproducibility, and consistency with the associated papers' experimental claims.
 
@@ -138,7 +142,7 @@ PyTorch vLLM SGLang TensorRT-LLM CUDA Cloud TPU Docker Hugging Face
 
 ### Research grounded in deployed systems.
 
-Experience 2024—present
+Experience 2024–present
 
 #### Systems Engineer — Archivio di Stato di Pistoia (Italian State Archive), Italian Ministry of Culture
 

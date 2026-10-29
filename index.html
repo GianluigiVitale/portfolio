@@ -67,6 +67,9 @@
                         "https://scholar.google.com/citations?hl=en&user=x4K6NWUAAAAJ",
                         "https://openreview.net/profile?id=~Gianluigi_Vitale1"
                     ],
+                    "award": [
+                        "Distinguished Artifact Evaluator Award, SOSP 2026 Artifact Evaluation Committee"
+                    ],
                     "knowsAbout": [
                         "Machine learning systems",
                         "LLM serving",
@@ -136,6 +139,7 @@
                         <div class="panel-label"><span class="status-dot"></span><span data-i18n="currentLabel">Current</span></div>
                         <div class="now-item"><span class="now-key" data-i18n="nowPublicationKey">Latest publication</span><strong data-i18n="nowPublicationValue">STF · NeurIPS 2026 poster</strong></div>
                         <div class="now-item"><span class="now-key" data-i18n="nowMlsysKey">MLSys 2026</span><strong data-i18n="nowMlsysValue">DriftBench · oral · sole author</strong></div>
+                        <div class="now-item"><span class="now-key" data-i18n="nowReviewKey">Under review</span><strong data-i18n="nowReviewValue">MLSys 2027 · Cross-generation numerical agreement on TPUs</strong></div>
                         <div class="now-item"><span class="now-key" data-i18n="nowServiceKey">Service</span><strong data-i18n="nowServiceValue">MLSys 2027 Program Committee · NeurIPS Ethics · MLSys & SOSP Artifact Evaluation</strong></div>
                     </aside>
                 </div>
@@ -148,7 +152,7 @@
                             <div class="feature-main">
                                 <div class="work-label"><span>MLSys 2026</span><span data-i18n="oralPresentation">Oral presentation</span><span data-i18n="soleAuthor">Sole author</span><span data-i18n="acmBadges">ACM badges: Available · Functional · Reproduced</span></div>
                                 <h3>DriftBench: Measuring and Predicting Infrastructure Drift in LLM Serving Systems</h3>
-                                <p data-i18n="driftbenchDesc">DriftBench is a measurement and prediction framework comprising 236,985 prompt-response pairs across 105 configurations, 5 models, 4 GPU platforms, 3 frameworks, and 3 precisions. Its Portability Risk Index generalizes to unseen hardware (R² = 0.909) and precision (R² = 0.763), separating systematic hardware/precision drift from framework/model changes that require re-measurement. In production validation, it blocked a high-drift upgrade where 23.85% of safety prompts flipped classification.</p>
+                                <p data-i18n="driftbenchDesc">DriftBench is a measurement and prediction framework comprising 236,985 prompt-response pairs across 105 configurations, 5 models, 4 GPU platforms, 3 frameworks, and 3 precisions. Its Portability Risk Index generalizes to unseen hardware (R² = 0.909) and precision (R² = 0.763), separating systematic hardware/precision drift from framework/model changes that require re-measurement. In a migration case study that passed throughput, latency, and perplexity checks, 23.85% of safety labels flipped while the net unsafe rate rose by only 1.15 points.</p>
                                 <div class="inline-links">
                                     <a href="https://proceedings.mlsys.org/paper_files/paper/2026/hash/ea0b5818ae9255ee1fb1e3b4442d2ffe-Abstract-Conference.html" target="_blank" rel="noopener"><span data-i18n="proceedingsLink">MLSys proceedings</span> <span aria-hidden="true">↗</span></a>
                                     <a href="https://doi.org/10.5281/zenodo.19361066" target="_blank" rel="noopener"><span data-i18n="artifactsLink">Artifacts & dataset</span> <span aria-hidden="true">↗</span></a>
@@ -162,7 +166,7 @@
                         <header class="trc-header">
                             <div class="card-kicker"><span>Google TPU Research Cloud</span><span data-i18n="activeSince">Active since May 2026</span></div>
                             <h3 data-i18n="trcTitle">Research built with Google TPU Research Cloud</h3>
-                            <p data-i18n="trcIntro">Model bring-up, new kernels, cross-accelerator validation, and bit-level hardware characterization across TPU v4, v5e, and v6e.</p>
+                            <p data-i18n="trcIntro">Model bring-up, new kernels, and cross-accelerator validation across TPU v4, v5e, and v6e.</p>
                         </header>
                         <div class="trc-results-grid">
                             <section class="trc-result trc-result-featured">
@@ -181,14 +185,9 @@
                                 <p data-i18n="driftTpuDesc">Extended the MLSys 2026 result to TPU v5e and v6e. The predictability result held across the new numerical path, with R² from 0.72 to 0.96.</p>
                             </section>
                             <section class="trc-result">
-                                <span class="result-status" data-i18n="researchInProgress">Research in progress</span>
-                                <h4 data-i18n="mxuTitle">Bit-level TPU MXU characterization</h4>
-                                <p data-i18n="mxuDesc">Built a CPU simulator that reproduces real Llama-3.1-8B matrix multiplications bit-for-bit on a native pass, enabling deterministic study of TPU numerical behavior.</p>
-                            </section>
-                            <section class="trc-result">
                                 <span class="result-status" data-i18n="collaboration">Collaboration</span>
-                                <h4 data-i18n="genomicsTitle">Long-context genomics with CNR Italy</h4>
-                                <p data-i18n="genomicsDesc">A collaboration studying whether long-context DNA models encode linkage disequilibrium, combining ML systems work with genomics expertise at Italy’s National Research Council.</p>
+                                <h4 data-i18n="genomicsTitle">Long-context genomics with ICAR-CNR</h4>
+                                <p data-i18n="genomicsDesc">A collaboration studying whether long-context DNA models encode linkage disequilibrium, combining ML systems work with genomics expertise at ICAR-CNR (Italy’s National Research Council).</p>
                             </section>
                         </div>
                     </article>
@@ -196,10 +195,16 @@
                     <article class="work-card review-card review-wide">
                         <div class="card-kicker"><span>NeurIPS 2026 · Main track</span><span data-i18n="neuripsStatus">Accepted poster · Sole author</span></div>
                         <h3>Decomposing One Professional-Framing Pipeline: Which Components Shift LLM Safety Boundaries?</h3>
-                        <p data-i18n="neuripsSummary">A pre-specified 2×2×2 factorial ablation of the STF professional-framing pipeline, evaluated in approximately 31,900 trials across nine LLMs. Persona adoption was the main driver of acceptance (OR = 6.5), terminology substitution the main driver of response depth (β = 0.91), and moral justification showed no detectable positive effect at the stated equivalence bounds.</p>
+                        <p data-i18n="neuripsSummary">A pre-specified 2×2×2 factorial ablation of the STF professional-framing pipeline: 5,000 human-labeled trials on three closed frontier models in the primary study, four 5,000-trial factorials (20,000 trials) in total, and behavioral checks on six open-weight models. A professional persona was the main driver of acceptance (OR = 6.5), Linguistic Substitution the main driver of response depth (cumulative-logit coefficient β = 0.91), and moral justification showed no detectable positive effect on acceptance.</p>
                         <div class="inline-links">
                             <a href="https://openreview.net/forum?id=1UvkQdlJOO" target="_blank" rel="noopener"><span data-i18n="neuripsPaperLink">Paper on OpenReview</span> <span aria-hidden="true">↗</span></a>
                         </div>
+                    </article>
+
+                    <article class="work-card review-card review-wide">
+                        <div class="card-kicker"><span data-i18n="mxuStatus">Under review · MLSys 2027</span><span>G. Vitale · R. Pietrini</span></div>
+                        <h3>Cross-Generation Numerical Agreement of LLM Inference on TPUs</h3>
+                        <p data-i18n="mxuSummary">Probing TPU v4, v5e, and v6e from outside, we localized cross-generation bf16 matrix-multiplication differences to the compiled cross-pass reduction order, and a CPU emulator reproduced 34.6M fresh outputs bit for bit on all three generations (bf16, default precision, four standard input regimes). Matching matrix multiplications alone does not make the model agree: whole-program pinning yields identical logits and greedy text on all three generations, and identical vLLM output on v5e and v6e.</p>
                     </article>
                 </div>
             </section>
@@ -213,7 +218,7 @@
                     <div class="service-grid">
                         <article><span class="service-year">2026–2027</span><h3 data-i18n="mlsysPcTitle">Program Committee Member — MLSys 2027</h3><p data-i18n="mlsysPcDesc">Reviewing submissions for the MLSys 2027 technical program.</p></article>
                         <article><span class="service-year">2026</span><h3 data-i18n="neuripsEthicsTitle">NeurIPS Ethics Reviewer</h3><p data-i18n="neuripsEthicsDesc">Reviewed submissions for ethical concerns, societal harms, research-integrity risks, and compliance with conference guidelines.</p></article>
-                        <article><span class="service-year">2026</span><h3 data-i18n="sospTitle">Artifact Evaluation Committee Member — SOSP 2026</h3><p data-i18n="sospDesc">Evaluated research artifacts in memory-efficient model serving and memory-safety analysis for GPU kernels in LLM inference systems. Assessed availability, functionality, reproducibility, and consistency with the associated papers' experimental claims.</p></article>
+                        <article><span class="service-year">2026</span><h3 data-i18n="sospTitle">Artifact Evaluation Committee Member — SOSP 2026</h3><span class="invitation-badge service-award">Distinguished Artifact Evaluator Award</span><p data-i18n="sospDesc">Evaluated research artifacts in memory-efficient model serving and memory-safety analysis for GPU kernels in LLM inference systems. Assessed availability, functionality, reproducibility, and consistency with the associated papers' experimental claims.</p></article>
                         <article><span class="service-year">2026</span><h3 data-i18n="mlsysAeTitle">Artifact Evaluation Committee Member — MLSys 2026</h3><p data-i18n="mlsysAeDesc">Evaluated four accepted submissions spanning attention-kernel optimization, ML profiling infrastructure, GPU memory disaggregation, and distributed inference. Reproduced experimental results on rented 8×H100 clusters (RunPod) and AMD MI350X infrastructure (AMD University Program), assessing availability, functionality, and consistency with each paper's claims.</p></article>
                     </div>
                 </div>
@@ -240,7 +245,7 @@
                     <div><p class="section-index">04 / <span data-i18n="profileIndex">Profile</span></p><h2 data-i18n="profileTitle">Research grounded in deployed systems.</h2></div>
                     <div class="profile-details">
                         <article>
-                            <div class="profile-meta"><span data-i18n="experienceLabel">Experience</span><span>2024—<span data-i18n="present">present</span></span></div>
+                            <div class="profile-meta"><span data-i18n="experienceLabel">Experience</span><span>2024–<span data-i18n="present">present</span></span></div>
                             <h3 data-i18n="ministryTitle">Systems Engineer — Archivio di Stato di Pistoia (Italian State Archive), Italian Ministry of Culture</h3>
                             <p data-i18n="ministryDesc">Designed and deployed a retrieval-augmented generation system over 10,000 internal administrative documents, delivering source-cited answers to staff queries. Built an AI-assisted public consultation interface giving staff and citizens natural-language access to the full inventory database.</p>
                         </article>

@@ -152,11 +152,11 @@ h1 { color: $ink; font-size: clamp(52px, 7vw, 92px); font-weight: 600; letter-sp
 .trc-result {
     border-right: 1px solid $line;
     border-bottom: 1px solid $line;
-    grid-column: span 2;
+    grid-column: span 3;
     min-width: 0;
     padding: 30px;
 
-    &:nth-child(2), &:last-child { border-right: 0; }
+    &:nth-child(even) { border-right: 0; }
     h4 { color: $ink; font-size: 19px; line-height: 1.25; margin: 36px 0 12px; }
     p { color: #52676c; font-size: 13px; margin: 0; }
 }
@@ -173,13 +173,14 @@ h1 { color: $ink; font-size: clamp(52px, 7vw, 92px); font-weight: 600; letter-sp
 }
 .invitation-badge { background: $amber; color: $ink; display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 500; letter-spacing: 0.07em; padding: 6px 9px; text-transform: uppercase; }
 .service-grid {
-    display: grid; gap: 1px; grid-template-columns: repeat(3, minmax(0, 1fr)); background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.16);
+    display: grid; gap: 1px; grid-template-columns: repeat(2, minmax(0, 1fr)); background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.16);
     article { background: $ink; min-height: 250px; padding: 38px; }
     h3 { color: $white; font-size: 21px; letter-spacing: -0.025em; line-height: 1.2; margin: 20px 0 15px; }
     p { color: #9fb5b8; font-size: 14px; margin-bottom: 0; }
 }
 .wide-service { grid-column: 1 / -1; min-height: auto !important; }
 .service-year { color: $mint; font-family: 'IBM Plex Mono', monospace; font-size: 10px; }
+.service-award { margin-bottom: 15px; }
 
 .split-heading { align-items: end; display: grid; gap: 80px; grid-template-columns: 1fr 0.8fr; max-width: none; > p:last-child { font-size: 16px; margin-bottom: 5px; } }
 .research-grid {
@@ -230,7 +231,7 @@ footer { background: $ink; color: #8fa6aa; padding: 25px 0; }
     .hero::after { animation: none; background: rgba(243, 240, 232, 0.78); }
     .hero-grid { animation: hero-content-in 500ms 180ms ease both; }
     .hero-grid, .profile-grid { gap: 48px; grid-template-columns: 1fr; }
-    .now-panel { display: grid; gap: 0 28px; grid-template-columns: repeat(3, minmax(0, 1fr)); justify-self: stretch; max-width: none; }
+    .now-panel { display: grid; gap: 0 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-self: stretch; max-width: none; }
     .panel-label { grid-column: 1 / -1; }
     .feature-body, .work-grid, .service-feature, .split-heading { grid-template-columns: 1fr; }
     .feature-aside { border-left: 0; border-top: 1px solid $line; }
@@ -238,7 +239,6 @@ footer { background: $ink; color: #8fa6aa; padding: 25px 0; }
     .trc-result, .trc-result-featured { grid-column: span 1; }
     .trc-result:nth-child(2) { border-right: 1px solid $line; }
     .trc-result:nth-child(even) { border-right: 0; }
-    .trc-result:last-child { grid-column: 1 / -1; }
     .research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); article:nth-child(3) { border-left: 0; border-top: 1px solid $line; } article:nth-child(4) { border-top: 1px solid $line; } }
 }
 

@@ -4,8 +4,10 @@ This is my research portfolio showcasing my work in ML systems, LLM serving infr
 
 **Key Features:**
 - Publications: accepted NeurIPS 2026 main-track poster and DriftBench (MLSys 2026 oral)
+- Manuscript under review at MLSys 2027, co-authored with Prof. Rocco Pietrini
 - Active Google TPU Research Cloud allocation and current TPU research
 - Academic service: MLSys 2027 Program Committee, MLSys and SOSP artifact evaluation, and NeurIPS ethics review
+- SOSP 2026 Distinguished Artifact Evaluator Award
 - Professional experience, education, and research profiles
 - English and Italian content with responsive desktop and mobile layouts
 

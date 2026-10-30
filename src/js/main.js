@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ministryDesc: 'Progettazione e messa in produzione di un sistema di retrieval-augmented generation (RAG) su oltre 10.000 documenti amministrativi interni, che risponde alle domande del personale citando le fonti. Realizzazione di un’interfaccia di consultazione pubblica basata sull’AI, che permette a personale e cittadini di interrogare in linguaggio naturale l’intero database dell’inventario.',
         educationLabel: 'Formazione', expectedDate: 'Prevista a marzo 2027',
         degreeTitle: 'Laurea triennale in Ingegneria Informatica · Universitas Mercatorum',
-        degreeDesc: 'Media 29,35/30 (3,87/4,0 secondo la conversione WES). Tesi: DSProfiler — analisi statica e machine learning per l’individuazione automatica di anti-pattern prestazionali nell’uso delle strutture dati in Python.',
+        degreeDesc: 'Media 29,35/30 (3,87/4,0 secondo la conversione WES). Tesi: Natural Language Is Flatland for Machine Intelligence: AI Systems Should Decouple Their Reasoning Substrate from Human Language.',
         contactEyebrow: 'Collaborazioni di ricerca e opportunità di dottorato', contactTitle: 'Parliamo di sistemi ML affidabili.',
         footerNote: 'Ricerca sui sistemi ML', backToTop: 'Torna su ↑'
     };

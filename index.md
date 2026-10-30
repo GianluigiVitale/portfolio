@@ -152,7 +152,7 @@ Education Expected Mar. 2027
 
 #### B.Sc. in Computer Engineering · Universitas Mercatorum
 
-GPA 29.35/30 (3.87/4.0 WES-converted). Thesis: DSProfiler — static analysis and machine learning for automated detection of data-structure performance anti-patterns in Python.
+GPA 29.35/30 (3.87/4.0 WES-converted). Thesis: Natural Language Is Flatland for Machine Intelligence: AI Systems Should Decouple Their Reasoning Substrate from Human Language.
 
 [Google Scholar ↗](https://scholar.google.com/citations?hl=en&user=x4K6NWUAAAAJ) [ORCID ↗](https://orcid.org/0009-0007-6740-2695) [OpenReview ↗](https://openreview.net/profile?id=~Gianluigi_Vitale1) [GitHub ↗](https://github.com/GianluigiVitale) [LinkedIn ↗](https://www.linkedin.com/in/gianluigi-vitale615)
 

@@ -154,6 +154,12 @@ Education Expected Mar. 2027
 
 GPA 29.35/30. Thesis: Natural Language Is Flatland for Machine Intelligence: AI Systems Should Decouple Their Reasoning Substrate from Human Language.
 
+Award 2026
+
+#### Third Prize — International Mathematics Competition for University Students (IMC 2026)
+
+Tied for 171st of 448 (top 40%); most competitors are sent by their universities, about 180 universities in 50 countries.  [Results ↗](https://www.imc-math.org.uk/archive/results/2026/IMC_2026_Results.pdf) · [IMC website ↗](https://www.imc-math.org.uk/)
+
 [Google Scholar ↗](https://scholar.google.com/citations?hl=en&user=x4K6NWUAAAAJ) [ORCID ↗](https://orcid.org/0009-0007-6740-2695) [OpenReview ↗](https://openreview.net/profile?id=~Gianluigi_Vitale1) [GitHub ↗](https://github.com/GianluigiVitale) [LinkedIn ↗](https://www.linkedin.com/in/gianluigi-vitale615)
 
 Research conversations & PhD opportunities

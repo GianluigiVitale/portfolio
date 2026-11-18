@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
         educationLabel: 'Formazione', expectedDate: 'Prevista a marzo 2027',
         degreeTitle: 'Laurea triennale in Ingegneria Informatica · Universitas Mercatorum',
         degreeDesc: 'Media 29,35/30. Tesi: Natural Language Is Flatland for Machine Intelligence: AI Systems Should Decouple Their Reasoning Substrate from Human Language.',
+        awardLabel: 'Premio', imcTitle: 'Terzo premio — International Mathematics Competition for University Students (IMC 2026)',
+        imcDesc: '171° posto ex aequo su 448 (top 40%); partecipanti inviati per lo più dai propri atenei, circa 180 atenei di 50 paesi.', imcResults: 'Risultati ↗', imcSite: 'Sito IMC ↗',
         contactEyebrow: 'Collaborazioni di ricerca e opportunità di dottorato', contactTitle: 'Parliamo di sistemi ML affidabili.',
         footerNote: 'Ricerca sui sistemi ML', backToTop: 'Torna su ↑'
     };
